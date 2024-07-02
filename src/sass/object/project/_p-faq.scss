@@ -1,0 +1,264 @@
+@use "global" as *;
+
+.p-faq {
+  position: relative;
+}
+
+.p-faq::before {
+  content: "";
+  width: myrem(210);
+  height: myrem(45);
+  position: absolute;
+  top: -32px;
+  left: 6px;
+  clip-path: polygon(0 50%, 100% 0%, 100% 100%);
+  background: linear-gradient(to right, $white, $pink1);
+  @include mq(md) {
+    content: none;
+  }
+}
+
+.p-faq::after {
+  content: "";
+  width: myrem(250);
+  height: myrem(35);
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  background: linear-gradient(to left, $white, $pink1);
+  @include mq(md) {
+    content: none;
+  }
+}
+
+.p-faq__sub-title {
+  margin: 0 auto;
+  width: fit-content;
+  position: relative;
+  font-size: myrem(30);
+  font-weight: 400;
+  font-family: $font-cinzel;
+  color: $pink5;
+  @include mq(md) {
+    font-size: myrem(69);
+  }
+}
+
+.p-faq__sub-title::before {
+  content: "Q";
+  position: absolute;
+  top: myrem(-17);
+  left: myrem(-39);
+  font-size: myrem(40);
+  @include mq(md) {
+    top: myrem(-41);
+    left: myrem(-91);
+    font-size: myrem(95);
+  }
+}
+
+.p-faq__sub-title::after {
+  content: "A";
+  position: absolute;
+  top: myrem(-6);
+  left: myrem(28);
+  font-size: myrem(40);
+  @include mq(md) {
+    top: myrem(-16);
+    left: myrem(65);
+    font-size: myrem(95);
+  }
+}
+
+.p-faq__title {
+  margin: 0 auto;
+  width: fit-content;
+  position: relative;
+  font-size: myrem(18);
+  font-weight: 900;
+  color: $pink1;
+  @include mq(md) {
+    font-size: myrem(38);
+  }
+}
+
+.p-faq__title::before,
+.p-faq__title::after {
+  content: "";
+  width: myrem(108);
+  height: myrem(13);
+  position: absolute;
+  top: 47%;
+  background-size: myrem(5) myrem(7);
+  background-image: linear-gradient(to right, $gold1, transparent 2px);
+  background-repeat: repeat-x;
+  transform: skew(-23deg, 0deg);
+  @include mq(md) {
+    width: myrem(360);
+    background-size: myrem(7) myrem(8);
+  }
+}
+
+.p-faq__title::before {
+  left: myrem(-118);
+  @include mq(md) {
+    left: myrem(-391);
+  }
+}
+
+.p-faq__title::after {
+  right: myrem(-118);
+  @include mq(md) {
+    right: myrem(-386);
+  }
+}
+
+.p-faq__list {
+  margin: 0 auto;
+  padding: 0 myrem(15);
+  max-width: myrem(375);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: myrem(19);
+  @include mq(md) {
+    padding: 0 myrem(200);
+    max-width: myrem(1400);
+    row-gap: myrem(23);
+  }
+}
+
+.p-faq__question {
+  padding: myrem(14) 0 myrem(13) myrem(15);
+  display: flex;
+  background-color: $pink2;
+  cursor: pointer;
+  @include mq(md) {
+    padding: myrem(11) 0 myrem(14) myrem(26);
+  }
+}
+
+.p-faq__question-icon,
+.p-faq__answer-icon {
+  width: myrem(32);
+  height: myrem(32);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: myrem(18);
+  font-family: $font-cinzel;
+  border-radius: 50%;
+  background-color: $pink6;
+  @include mq(md) {
+    width: myrem(52);
+    height: myrem(50);
+    font-size: myrem(29);
+  }
+}
+
+.p-faq__answer-icon--green {
+  background-color: $green3;
+}
+
+.p-faq__question-text,
+.p-faq__answer-text {
+  width: 100%;
+  font-size: myrem(16);
+  font-weight: 900;
+  @include mq(md) {
+    font-size: myrem(16);
+  }
+}
+
+.p-faq__question-text {
+  padding: myrem(3) myrem(21) 0 myrem(12);
+  position: relative;
+  @include mq(md) {
+    padding: myrem(16) myrem(21) 0 myrem(25);
+  }
+}
+
+.p-faq__question-text1 {
+  @include mq(md) {
+    padding: myrem(18) 0 0 myrem(23);
+  }
+}
+
+.p-faq__answer {
+  padding: myrem(12) 0 myrem(13) myrem(16);
+  display: flex;
+  background-color: $pink2;
+  position: relative;
+  @include mq(md) {
+    padding: myrem(24) myrem(26) myrem(19);
+  }
+}
+
+.p-faq__answer::before {
+  content: "";
+  width: myrem(315);
+  height: myrem(1);
+  position: absolute;
+  top: 0;
+  left: myrem(15);
+  background-color: $pink1;
+  @include mq(md) {
+    width: 96%;
+    top: myrem(7);
+    left: myrem(19);
+  }
+}
+
+.p-faq__answer-text {
+  padding: myrem(1) myrem(11) 0;
+  line-height: 1.4;
+  @include mq(md) {
+    padding: myrem(12) 0 0 myrem(23);
+  }
+}
+
+//アコーディオンメニュー
+.js-accordion-title {
+  position: relative;
+}
+
+.js-accordion-title:before {
+  content: "";
+  width: myrem(18);
+  height: myrem(2);
+  position: absolute;
+  top: 50%;
+  right: myrem(16);
+  background: $pink5;
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+  @include mq(md) {
+    width: myrem(28);
+    right: myrem(27);
+  }
+}
+
+.js-accordion-title:after {
+  content: "";
+  position: absolute;
+  width: myrem(18);
+  height: myrem(2);
+  top: 50%;
+  right: myrem(16);
+  background: $pink5;
+  transition: all 0.3s ease-in-out;
+  @include mq(md) {
+    width: myrem(28);
+    right: myrem(27);
+  }
+}
+
+.js-accordion-title.open:before {
+  transform: rotate(180deg);
+}
+
+.js-accordion-title.open:after {
+  opacity: 0;
+}

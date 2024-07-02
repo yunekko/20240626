@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.p-float {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-float__tel,
+.p-float__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: myrem(18.6);
+  font-weight: 900;
+  text-align: center;
+  color: $white;
+  border-top: 1.5px solid $white;
+  border-right: 1.5px solid $white;
+  border-left: 1.5px solid $white;
+  border-radius: myrem(10) myrem(10) 0 0;
+}
+
+.p-float__tel {
+  width: 42%;
+  position: relative;
+  background-color: $pink1;
+}
+
+.p-float__tel::before {
+  content: "";
+  width: myrem(35);
+  height: myrem(35);
+  position: absolute;
+  top: 50%;
+  left: myrem(18);
+  transform: translateY(-50%);
+  display: inline-block;
+  background-image: url(../images/tel.png);
+  background-size: 54%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.p-float__tel a {
+  padding: myrem(21) 0 myrem(21) myrem(15);
+  width: 100%;
+  display: block;
+}
+
+.p-float__line {
+  width: 58%;
+  font-size: myrem(16);
+  background-color: $green4;
+}
+
+.p-float__line a {
+  padding: myrem(7) 0;
+  width: 100%;
+  display: block;
+}

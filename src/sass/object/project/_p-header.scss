@@ -1,0 +1,215 @@
+@use "global" as *;
+
+.p-header {
+  width: 100%;
+  height: myrem(60);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: $pink1;
+  @include mq(md) {
+    height: myrem(90);
+  }
+}
+
+.p-header__inner {
+  padding-left: myrem(15);
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq(md) {
+    padding-left: myrem(70);
+  }
+}
+
+.p-header__logo {
+  width: 49%;
+  @include mq(md) {
+    width: 21%;
+  }
+}
+
+.p-header__nav {
+  padding: myrem(56) 0 0 myrem(46);
+  width: 100vw;
+  height: calc(100vh - myrem(60));
+  display: none;
+  position: fixed;
+  top: myrem(60);
+  left: 0;
+  z-index: 80;
+  background-color: $white;
+  @include mq(md) {
+    padding: 0 0 0 0;
+    width: 40%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-grow: 1;
+    position: initial;
+    background-color: transparent;
+  }
+}
+
+.p-header__nav-list {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.p-header__nav-item:not(:first-child) {
+  @include mq(md) {
+    margin-left: myrem(8);
+  }
+}
+
+.p-header__nav-item a {
+  padding: myrem(10) 0 myrem(11);
+  display: block;
+  font-size: myrem(16);
+  font-weight: 400;
+  @include mq(md) {
+    padding: myrem(37) 0 myrem(34);
+    position: relative;
+    font-size: myrem(13);
+    color: $white;
+  }
+}
+
+.p-header__nav-item a:hover {
+  opacity: 1;
+}
+
+.p-header__nav-item a:active {
+  color: $pink1;
+}
+
+.p-header__nav-item a::after {
+  @include mq(md) {
+    content: "";
+    width: 100%;
+    height: myrem(0.93);
+    position: absolute;
+    bottom: myrem(25);
+    left: 0;
+    background-color: $white;
+    transform: scale(0, 1);
+    transition: 0.5s;
+    transform-origin: left top;
+  }
+}
+
+.p-header__nav-item a:hover::after {
+  transform: scale(1, 1);
+}
+
+.p-header__information {
+  display: none;
+  @include mq(md) {
+    margin-left: myrem(15);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-basis: myrem(450);
+  }
+}
+
+.p-information__inner {
+  @include mq(md) {
+    width: 55%;
+  }
+}
+
+.p-header__tel {
+  @include mq(md) {
+    margin-left: myrem(-4);
+    display: flex;
+    align-items: center;
+    font-size: myrem(22);
+    font-weight: 900;
+    letter-spacing: myrem(0.4);
+    color: $white;
+  }
+}
+
+.p-header__tel::before {
+  @include mq(md) {
+    margin-top: myrem(5);
+    content: "";
+    width: myrem(28);
+    height: myrem(28);
+    display: inline-block;
+    background-image: url(../images/tel.png);
+    background-size: 54%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.p-header__time {
+  @include mq(md) {
+    font-size: myrem(14);
+    font-weight: 400;
+    color: $white;
+  }
+}
+
+.p-header__button {
+  display: none;
+  @include mq(md) {
+    padding-top: myrem(9);
+    width: myrem(203);
+    display: block;
+  }
+}
+
+.p-header__hamburger {
+  margin-right: myrem(5);
+  padding: myrem(17) myrem(11);
+  width: myrem(45);
+  height: inherit;
+  border-radius: myrem(5);
+  z-index: 50;
+  cursor: pointer;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-header__hamburger span {
+  width: 100%;
+  height: myrem(2);
+  display: block;
+  background-color: $white;
+  position: relative;
+  transition: 0.3s;
+}
+
+.p-header__hamburger span:nth-child(2) {
+  margin: myrem(8) 0;
+}
+
+//ハンバーガーがクリックされた時の動き
+.p-header__hamburger.is-active span:nth-child(1) {
+  width: myrem(30);
+  transform: translate(myrem(-3), myrem(9)) rotate(-45deg);
+}
+
+.p-header__hamburger.is-active span:nth-child(2) {
+  background-color: transparent;
+}
+
+.p-header__hamburger.is-active span:nth-child(3) {
+  width: myrem(30);
+  transform: translate(myrem(-2), myrem(-10)) rotate(45deg);
+}
+
+/* ハンバーガーメニュー展開時、背景を固定 */
+body.active {
+  height: 100%;
+  overflow: hidden;
+}

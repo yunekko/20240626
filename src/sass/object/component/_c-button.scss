@@ -1,0 +1,110 @@
+@use "global" as *;
+
+.c-button {
+  padding: myrem(6) myrem(10) myrem(6) 0;
+  width: 100%;
+  display: inline-block;
+  color: $white;
+  font-weight: 900;
+  line-height: 1.4;
+  text-align: center;
+  background-color: $green4;
+  border-radius: myrem(50);
+  box-shadow: 0 4.25px 0 0 rgba(51, 36, 63, 0.3),
+    inset 0 4.25px 0 0 rgba(255, 255, 255, 0.4);
+  position: relative;
+  top: 0;
+  transition: 0.3s;
+  @include mq(md) {
+    font-size: myrem(28);
+    box-shadow: 0px 7.38px 0px 0px rgba(51, 36, 63, 0.3),
+      inset 0 7.38px 0 0 rgba(255, 255, 255, 0.4);
+  }
+}
+
+.c-button-top {
+  padding: myrem(8) myrem(21) myrem(10) 0;
+  font-size: myrem(14);
+  line-height: 1.2;
+  border: 2px solid $white;
+  box-shadow: inset 0px -4.25px 0px 0px rgba(51, 36, 63, 0.3),
+    inset 0 4.25px 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.c-button__triangle {
+  display: inline-block;
+  position: absolute;
+  top: 43%;
+  right: 13%;
+  width: myrem(12);
+  height: myrem(12);
+  background-color: $white;
+  transform: rotate(120deg) skewY(30deg) scaleX(0.86666);
+  border-top-left-radius: myrem(3);
+  transition: 0.3s;
+  @include mq(md) {
+    right: 12%;
+    width: myrem(20);
+    height: myrem(20);
+  }
+}
+
+.c-button__triangle-top {
+  width: myrem(10);
+  height: myrem(10);
+  right: 11%;
+}
+
+.c-button__triangle::before,
+.c-button__triangle::after {
+  content: "";
+  width: myrem(12);
+  height: myrem(12);
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include mq(md) {
+    width: myrem(20);
+    height: myrem(20);
+  }
+}
+
+.c-button__triangle-top::before,
+.c-button__triangle-top::after {
+  width: myrem(10);
+  height: myrem(10);
+}
+
+.c-button__triangle::before {
+  background-color: $white;
+  transform: translateX(50%) skewX(-45deg);
+  border-top-right-radius: myrem(3);
+}
+
+.c-button__triangle::after {
+  background-color: $white;
+  transform: translateY(50%) skewY(-45deg);
+  border-bottom-left-radius: myrem(3);
+}
+
+.c-button:hover {
+  top: myrem(7.38);
+  box-shadow: 0 0 0 0 transparent, inset 0 7.38px 0 0 rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.c-button-top:hover {
+  top: myrem(4.25);
+  box-shadow: inset 0px -4.25px 0px 0px rgba(51, 36, 63, 0.3),
+    inset 0 4.25px 0 0 rgba(255, 255, 255, 0.4);
+}
+
+.c-button:hover .c-button__triangle {
+  right: 9%;
+  transition: 0.3s;
+}
+
+.c-button:hover .c-button__triangle-top {
+  right: 7%;
+}

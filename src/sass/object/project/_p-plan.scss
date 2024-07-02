@@ -1,0 +1,403 @@
+@use "global" as *;
+
+.p-plan__title {
+  margin: 0 auto;
+  padding: myrem(3) 0;
+  width: myrem(264);
+  font-size: myrem(20);
+  font-weight: 900;
+  text-align: center;
+  color: $pink1;
+  border-top: 1.5px solid $pink1;
+  border-bottom: 1.5px solid $pink1;
+  @include mq(md) {
+    padding: myrem(7) 0 myrem(9);
+    width: myrem(528);
+    font-size: myrem(38);
+    border-top: 3.17px solid $pink1;
+    border-bottom: 3.17px solid $pink1;
+  }
+}
+
+.p-plan__cards {
+  margin: 500px auto;
+  max-width: myrem(345);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: myrem(77);
+
+  @include mq(md) {
+    max-width: myrem(900);
+    row-gap: myrem(102);
+  }
+}
+
+.p-plan__card {
+  border: 3px solid $pink1;
+  border-radius: myrem(15);
+}
+
+.p-plan__card--green {
+  border: 3px solid $green1;
+}
+
+.p-plan__card-title {
+  padding: myrem(3) myrem(60);
+  position: relative;
+  top: myrem(-18);
+  left: myrem(25);
+  display: inline-block;
+  color: $white;
+  background-color: $pink1;
+  font-size: myrem(18);
+  font-weight: 900;
+  letter-spacing: myrem(1);
+  text-align: center;
+  @include mq(md) {
+    padding: myrem(3) myrem(50);
+    top: myrem(-34);
+    left: myrem(210);
+    font-size: myrem(40);
+    letter-spacing: myrem(2);
+  }
+}
+
+.p-plan__card-title--green {
+  background-color: $green1;
+}
+
+.p-plan__card-title::before,
+.p-plan__card-title::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 0;
+  border-color: $pink1 transparent;
+  border-style: solid;
+}
+
+.p-plan__card-title--green::before,
+.p-plan__card-title--green::after {
+  border-color: $green1 transparent;
+}
+
+.p-plan__card-title::before {
+  left: myrem(-13);
+  border-width: myrem(17) 0 myrem(16.5) myrem(14);
+  @include mq(md) {
+    left: myrem(-29);
+    border-width: myrem(33) 0 myrem(33.5) myrem(30);
+  }
+}
+
+.p-plan__card-title::after {
+  right: myrem(-12.5);
+  border-width: myrem(16.5) myrem(14) myrem(17) 0;
+  @include mq(md) {
+    right: myrem(-29);
+    border-width: myrem(33.5) myrem(30) myrem(33) 0;
+  }
+}
+
+.p-plan__card-sub-title {
+  width: 100%;
+  font-size: myrem(16);
+  font-weight: 900;
+  position: relative;
+  top: myrem(-79);
+  text-align: center;
+  @include mq(md) {
+    top: myrem(-138);
+    font-size: myrem(22);
+  }
+}
+
+.p-plan__card-sub-title::before,
+.p-plan__card-sub-title::after {
+  content: "";
+  width: myrem(16);
+  height: myrem(1);
+  position: absolute;
+  background-color: $black-main;
+  @include mq(md) {
+    width: myrem(20);
+  }
+}
+
+.p-plan__card-sub-title::before {
+  top: myrem(13);
+  left: myrem(96);
+  transform: rotate(66deg);
+  @include mq(md) {
+    top: myrem(17);
+    left: myrem(347);
+  }
+}
+
+.p-plan__card-sub-title::after {
+  top: myrem(13);
+  left: myrem(228);
+  transform: rotate(112deg);
+  @include mq(md) {
+    top: myrem(17);
+    left: myrem(528);
+  }
+}
+
+.p-plan__card-sub-title2::before {
+  left: myrem(54);
+  @include mq(md) {
+    left: myrem(293);
+  }
+}
+
+.p-plan__card-sub-title2::after {
+  left: myrem(268);
+  @include mq(md) {
+    left: myrem(583);
+  }
+}
+
+.p-plan__card-inner {
+  margin-top: myrem(-10);
+  padding: 0 myrem(11) myrem(30);
+  display: flex;
+  flex-direction: column;
+  @include mq(md) {
+    margin-top: myrem(-22);
+    padding: 0 myrem(38) myrem(27) myrem(25);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.p-plan__card-inner2 {
+  @include mq(md) {
+    padding: 0 myrem(38) myrem(22) myrem(25);
+  }
+}
+
+.p-plan__card-head {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: myrem(6);
+  row-gap: myrem(8);
+  @include mq(md) {
+    width: 52%;
+    align-content: baseline;
+    column-gap: myrem(5);
+    row-gap: myrem(14);
+  }
+}
+
+.p-plan__card-head2 {
+  @include mq(md) {
+    margin-top: myrem(-17);
+  }
+}
+
+.p-plan__card-part {
+  width: calc(74 / 315 * 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: myrem(14);
+  font-weight: 900;
+  background-color: $pink4;
+  border-radius: myrem(11);
+  @include mq(md) {
+    width: calc(100 / 420 * 100%);
+    font-size: myrem(17);
+    border-radius: myrem(14);
+  }
+}
+
+.p-plan__card-part--green {
+  background-color: $green2;
+}
+
+.p-plan__card-bottom {
+  padding: myrem(21) myrem(7) 0 myrem(7);
+  display: flex;
+  @include mq(md) {
+    margin-top: myrem(-31);
+    padding: 0;
+    width: 47.3%;
+  }
+}
+
+.p-plan__card-course {
+  padding-top: myrem(4);
+  width: myrem(66);
+  height: myrem(66);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url(../images/plan__course.png);
+  background-size: cover;
+  color: $white;
+  font-size: myrem(24);
+  font-weight: 900;
+  @include mq(md) {
+    margin-top: myrem(17);
+    padding-top: myrem(5);
+    width: myrem(94);
+    height: myrem(94);
+    font-size: myrem(34.78);
+  }
+}
+
+.p-plan__card-course span {
+  margin-top: myrem(11);
+  margin-left: myrem(4);
+  font-size: myrem(14);
+  font-weight: 900;
+  @include mq(md) {
+    margin-top: myrem(19);
+    margin-left: myrem(6);
+    font-size: myrem(20.68);
+  }
+}
+
+.p-plan__card-course::after {
+  margin-top: myrem(-18);
+  content: "コース";
+  color: $white;
+  font-size: myrem(14);
+  font-weight: 900;
+  @include mq(md) {
+    font-size: myrem(18.8);
+  }
+}
+
+.p-plan__card-price-box {
+  width: calc(100% - myrem(60));
+  @include mq(md) {
+    width: calc(100% - myrem(94));
+  }
+}
+
+.p-plan__card-price {
+  padding-left: myrem(37);
+  position: relative;
+  font-size: myrem(54);
+  font-weight: 900;
+  color: $pink1;
+  line-height: 1;
+  @include mq(md) {
+    padding-left: myrem(43);
+    font-size: myrem(80);
+  }
+}
+
+.p-plan__card-price--green {
+  color: $green1;
+}
+
+.p-plan__card-price::before {
+  content: "月々";
+  position: absolute;
+  top: myrem(8);
+  left: myrem(13);
+  font-size: myrem(20);
+  font-weight: 900;
+  writing-mode: vertical-lr;
+  @include mq(md) {
+    top: myrem(17);
+    font-size: myrem(30);
+  }
+}
+
+.p-plan__card-price span {
+  position: relative;
+  top: myrem(-4);
+  left: myrem(9);
+  font-size: myrem(26);
+  font-weight: 900;
+  @include mq(md) {
+    font-size: myrem(48);
+  }
+}
+
+.p-plan__card-price span::before {
+  content: "(税別)";
+  position: absolute;
+  top: myrem(-7);
+  left: myrem(-3);
+  font-size: myrem(10);
+  font-weight: 900;
+  @include mq(md) {
+    left: myrem(3);
+    font-size: myrem(16);
+  }
+}
+
+.p-plan__card-total-price {
+  padding: myrem(3) 0 0 myrem(5);
+  position: relative;
+  font-size: myrem(16);
+  font-weight: 900;
+  line-height: 1;
+  @include mq(md) {
+    padding: myrem(5) 0 0 myrem(24);
+    font-size: myrem(20);
+  }
+}
+
+.p-plan__card-total-price2 {
+  padding: myrem(6) 0 0 myrem(12);
+  @include mq(md) {
+    padding: myrem(21) 0 0 myrem(38);
+  }
+}
+
+.p-plan__card-total-price span {
+  margin-left: myrem(19);
+  font-size: myrem(22);
+  font-weight: 900;
+  @include mq(md) {
+    margin-left: myrem(22);
+    font-size: myrem(26);
+  }
+}
+
+.p-plan__card-total-price2 span {
+  margin-left: myrem(10);
+  @include mq(md) {
+    margin-left: myrem(6);
+  }
+}
+
+.p-plan__card-total-price::before {
+  content: "(税別)";
+  position: absolute;
+  top: myrem(13);
+  right: 0;
+  font-size: myrem(12);
+  font-weight: 900;
+  @include mq(md) {
+    right: myrem(-1);
+    font-size: myrem(14);
+  }
+}
+
+.p-plan__card-total-price2::before {
+  @include mq(md) {
+    top: myrem(31);
+  }
+}
+
+.p-plan__text {
+  font-size: myrem(13);
+  font-weight: 500;
+  font-family: $font-noto;
+  letter-spacing: myrem(0.3);
+  line-height: 1.6;
+  color: $black;
+  @include mq(md) {
+    padding-left: myrem(95);
+  }
+}

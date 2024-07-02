@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-information {
+  padding-top: myrem(53);
+  padding-bottom: myrem(117);
+  @include mq(md) {
+    padding-top: myrem(121);
+    padding-bottom: myrem(257);
+  }
+}

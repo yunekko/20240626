@@ -1,0 +1,304 @@
+@use "global" as *;
+
+.p-comparison {
+  // margin: myrem(40) auto 0;
+  // width: 100%;
+  // background-color: orange;
+  background: repeating-linear-gradient(
+    90deg,
+    #fff,
+    #fff 3px,
+    #d8f5f5 3px,
+    #d8f5f5 6px
+  );
+  @include mq(md) {
+    background: repeating-linear-gradient(
+      90deg,
+      #fff,
+      #fff 6px,
+      #d8f5f5 6px,
+      #d8f5f5 14px
+    );
+  }
+}
+
+.p-comparison__title {
+  padding: myrem(14) 0;
+  position: relative;
+  font-size: myrem(20);
+  font-weight: 900;
+  color: $white;
+  text-align: center;
+  background: radial-gradient(circle at 0 100%, transparent 7px, $gold1 8px),
+    radial-gradient(circle at 100% 100%, transparent 7px, $gold1 8px),
+    radial-gradient(circle at 100% 0, transparent 7px, $gold1 8px),
+    radial-gradient(circle at 0 0, transparent 7px, $gold1 8px);
+  background-position: bottom left, bottom right, top right, top left;
+  background-repeat: no-repeat;
+  background-size: 51% 51%;
+  @include mq(md) {
+    padding: myrem(16) 0;
+    font-size: myrem(38);
+    background: radial-gradient(circle at 0 100%, transparent 10px, $gold1 11px),
+      radial-gradient(circle at 100% 100%, transparent 10px, $gold1 11px),
+      radial-gradient(circle at 100% 0, transparent 10px, $gold1 11px),
+      radial-gradient(circle at 0 0, transparent 10px, $gold1 11px);
+    background-position: bottom left, bottom right, top right, top left;
+    background-repeat: no-repeat;
+    background-size: 51% 51%;
+  }
+}
+
+.p-comparison__title::before,
+.p-comparison__title::after {
+  content: "";
+  width: 94%;
+  height: 0;
+  position: absolute;
+  left: myrem(10);
+  border: 1px dashed $white;
+  @include mq(md) {
+    width: 96%;
+    left: myrem(17);
+  }
+}
+
+.p-comparison__title::before {
+  top: myrem(8);
+}
+
+.p-comparison__title::after {
+  bottom: myrem(6);
+}
+
+.p-comparison__cards {
+  margin: 0 auto;
+  max-width: myrem(345);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: myrem(25);
+  @include mq(md) {
+    max-width: myrem(1000);
+    flex-direction: row-reverse;
+    justify-content: center;
+    column-gap: myrem(40);
+  }
+}
+
+.p-comparison__card {
+  padding: myrem(10) myrem(15) myrem(25);
+  background-color: $white;
+  @include mq(md) {
+    padding: myrem(11) myrem(36) myrem(10) myrem(33);
+  }
+}
+
+.p-comparison__card:nth-child(2) {
+  padding-bottom: myrem(9);
+  @include mq(md) {
+    padding-bottom: myrem(10);
+  }
+}
+
+.p-comparison__card-title {
+  padding: 0 myrem(10) 0 myrem(8);
+  width: fit-content;
+  color: $white;
+  font-weight: 900;
+  background-color: $green3;
+  @include mq(md) {
+    padding: myrem(1) myrem(10) myrem(3) myrem(10);
+    font-size: myrem(18);
+  }
+}
+
+.p-comparison__card-title--pink {
+  background-color: $pink1;
+}
+
+.p-comparison__card-image {
+  width: myrem(315);
+  @include mq(md) {
+    width: myrem(410);
+  }
+}
+
+.p-comparison__card-image img {
+  aspect-ratio: 310/145;
+  @include mq(md) {
+    aspect-ratio: 410/190;
+  }
+}
+
+.p-comparison__card-texts {
+  margin-top: myrem(-3);
+  padding-right: myrem(15);
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    margin-top: myrem(-6);
+  }
+}
+
+.p-comparison__card-text {
+  font-size: myrem(10);
+  font-family: $font-noto;
+  color: $black;
+  text-align: center;
+  @include mq(md) {
+    font-size: myrem(13);
+    line-height: 1.4;
+  }
+}
+
+// 比較表
+
+.p-comparison__table {
+  margin-left: myrem(15);
+  padding-bottom: myrem(18);
+  overflow-x: auto;
+  @include mq(md) {
+    margin: 0 auto;
+    max-width: myrem(1000);
+    overflow-x: unset;
+  }
+}
+
+.p-comparison__table::-webkit-scrollbar {
+  height: myrem(10);
+}
+
+.p-comparison__table::-webkit-scrollbar-track {
+  background-color: $gray3;
+  border-radius: myrem(8);
+}
+
+.p-comparison__table::-webkit-scrollbar-thumb {
+  background-color: $pink1;
+  border-radius: myrem(8);
+}
+
+.p-comparison__table table {
+  min-width: myrem(630);
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+  @include mq(md) {
+  }
+}
+
+.p-comparison__table-row {
+  height: myrem(78);
+  @include mq(md) {
+    height: myrem(125);
+  }
+}
+
+.p-comparison__table-title {
+  width: 28.5%;
+  font-size: myrem(14);
+  font-weight: 900;
+  color: $white;
+  text-align: center;
+  background-color: $gray2;
+  border: 3px solid $gray3;
+  @include mq(md) {
+    font-size: myrem(18);
+  }
+}
+
+.p-comparison__table-title--pink {
+  padding-top: myrem(7);
+  padding-bottom: myrem(5);
+  position: relative;
+  background-color: $pink1;
+  border-top: none;
+  border-right: 3.15px solid $pink1;
+  border-left: 3.15px solid $pink1;
+  @include mq(md) {
+    padding-top: myrem(12);
+    font-size: myrem(20);
+  }
+}
+
+.p-comparison__table-title--pink::after {
+  content: "";
+  width: 103%;
+  height: myrem(472);
+  border: 3.15px solid $pink1;
+  position: absolute;
+  top: myrem(53);
+  left: myrem(-3);
+  @include mq(md) {
+    width: 102%;
+    border: 5px solid $pink1;
+    top: myrem(77);
+    height: myrem(754);
+  }
+}
+
+.p-comparison__table-title--green {
+  background-color: $green1;
+  border-top: none;
+  border-right: 1px solid $white;
+  @include mq(md) {
+    font-size: myrem(20);
+  }
+}
+
+.p-comparison__table-title--dot {
+  position: relative;
+}
+
+.p-comparison__table-title--dot::after {
+  content: "・";
+  position: absolute;
+  top: myrem(27);
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  @include mq(md) {
+    top: myrem(48);
+  }
+}
+
+.p-comparison__table-data {
+  background-color: $white;
+  border: 3px solid $gray3;
+}
+
+.p-comparison__table-data--pink {
+  background-color: $pink8;
+}
+
+.p-comparison__table-data--gray {
+  background-color: $gray4;
+}
+
+.p-comparison__table-icon {
+  margin-top: myrem(-11);
+  font-size: myrem(28);
+  color: $pink1;
+  @include mq(md) {
+    font-size: myrem(45);
+  }
+}
+
+.p-comparison__table-icon--bad {
+  font-size: myrem(33);
+  color: $gray1;
+  @include mq(md) {
+    font-size: myrem(50);
+  }
+}
+
+.p-comparison__table-text {
+  font-size: myrem(10);
+  font-weight: 500;
+  font-family: $font-noto;
+  @include mq(md) {
+    font-size: myrem(13);
+  }
+}

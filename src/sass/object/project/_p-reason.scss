@@ -1,0 +1,386 @@
+@use "global" as *;
+
+.p-reason {
+  position: relative;
+  z-index: -100;
+  background-color: $pink2;
+}
+
+.p-reason__inner {
+  margin: 0 auto;
+  max-width: myrem(345);
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+    max-width: myrem(1000);
+  }
+}
+
+.p-reason__image {
+  width: myrem(110);
+  position: absolute;
+  top: myrem(-25);
+  right: myrem(-11);
+  z-index: 50;
+  @include mq(md) {
+    width: myrem(186);
+    top: myrem(-30);
+    right: myrem(171);
+  }
+}
+
+.p-reason__image img {
+  aspect-ratio: 110/115;
+}
+
+.p-reason__title-box {
+  margin: 0 auto;
+  max-width: myrem(374);
+  width: 100%;
+  position: relative;
+  @include mq(md) {
+    max-width: myrem(700);
+  }
+}
+
+.p-reason__title-box:before {
+  content: "";
+  width: myrem(216);
+  height: myrem(61);
+  position: absolute;
+  top: myrem(18);
+  left: 50%;
+  z-index: -50;
+  transform: translateX(-50%);
+  background-color: $white;
+  border-top: 3px solid $pink1;
+  border-right: 3px solid $pink1;
+  border-left: 3px solid $pink1;
+  border-radius: 50% / 100% 100% 0 0;
+  @include mq(md) {
+    width: myrem(519);
+    height: myrem(181);
+    top: myrem(25);
+    border-top: 4.25px solid $pink1;
+    border-right: 4.25px solid $pink1;
+    border-left: 4.25px solid $pink1;
+  }
+}
+
+.p-reason__title-box::after {
+  content: "";
+  width: myrem(210);
+  height: myrem(5);
+  position: absolute;
+  top: myrem(76);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: $white;
+  @include mq(md) {
+    width: myrem(492);
+    height: myrem(10);
+    top: myrem(157);
+  }
+}
+
+.p-reason__sub-title {
+  position: absolute;
+  top: myrem(29);
+  left: myrem(56);
+  font-size: myrem(11);
+  font-weight: 900;
+  letter-spacing: myrem(0.6);
+  color: $pink1;
+  @include mq(md) {
+    top: myrem(50);
+    left: myrem(170);
+    font-size: myrem(20);
+    letter-spacing: myrem(-0.2);
+  }
+}
+
+.p-reason__sub-title::before,
+.p-reason__sub-title::after {
+  content: "";
+  width: myrem(13);
+  height: myrem(13);
+  position: absolute;
+  background-image: url(../images/reason__icon.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq(md) {
+    width: myrem(27);
+    height: myrem(27);
+  }
+}
+
+.p-reason__sub-title::before {
+  top: myrem(21);
+  left: myrem(30);
+  @include mq(md) {
+    top: myrem(32);
+    left: myrem(25);
+  }
+}
+
+.p-reason__sub-title::after {
+  top: myrem(21);
+  left: myrem(190);
+  @include mq(md) {
+    top: myrem(32);
+    left: myrem(308);
+  }
+}
+
+.p-reason__title {
+  position: relative;
+  top: myrem(40);
+  z-index: 50;
+  font-size: myrem(33);
+  font-weight: 400;
+  font-family: $font-sub;
+  text-align: center;
+  color: $gold1;
+  @include mq(md) {
+    top: myrem(74);
+    font-size: myrem(68);
+  }
+}
+
+.p-reason__title span {
+  margin-left: myrem(-6);
+  font-size: myrem(15);
+  font-weight: bold;
+  @include mq(md) {
+    font-size: myrem(32);
+  }
+}
+
+.p-reason__title::after {
+  content: "";
+  width: myrem(93);
+  height: myrem(1);
+  position: absolute;
+  top: myrem(42);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $gold1;
+  @include mq(md) {
+    width: myrem(180);
+    top: myrem(89);
+  }
+}
+
+.p-reason__cards {
+  counter-reset: number 0; /* number のカウンタを 0 にセット */
+  margin: 0 auto;
+  padding-top: myrem(43);
+  max-width: myrem(345);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: myrem(44);
+  background-color: $white;
+  border: 2px solid $pink1;
+  @include mq(md) {
+    padding: myrem(63) myrem(30) 0;
+    max-width: myrem(1000);
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: myrem(20);
+    row-gap: myrem(56);
+    border: 4.25px solid $pink1;
+  }
+}
+
+.p-reason__card {
+  padding: 0 myrem(15);
+  width: 100%;
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-reason__card-image {
+  margin: 0 auto;
+  width: myrem(250);
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.p-reason__card-image img {
+  aspect-ratio: 250/160;
+}
+
+.p-reason__card-image2 {
+  display: none;
+  @include mq(md) {
+    margin-top: myrem(10);
+    width: myrem(170);
+    display: block;
+  }
+}
+
+.p-reason__card-image2 img {
+  @include mq(md) {
+    aspect-ratio: 170/210;
+  }
+}
+
+.p-reason__card-body {
+  margin-top: myrem(12);
+  border: 3px double $pink3;
+  @include mq(md) {
+    border: 5px double $pink3;
+  }
+}
+
+.p-reason__card-number {
+  padding: 0 0 0 myrem(7);
+  width: fit-content;
+  position: relative;
+  top: myrem(-54);
+  left: myrem(12);
+  z-index: 10;
+  font-size: myrem(16.14);
+  font-weight: 400;
+  font-family: $font-cinzel;
+  line-height: 1.3;
+  text-transform: uppercase;
+  background: linear-gradient(
+    transparent 65%,
+    $white 0,
+    $white 80%,
+    transparent 0
+  );
+  @include mq(md) {
+    padding: 0 myrem(29) 0 myrem(9);
+    top: myrem(-81);
+    left: myrem(19);
+    font-size: myrem(21);
+    background: linear-gradient(
+      transparent 48%,
+      $white 0,
+      $white 90%,
+      transparent 0
+    );
+  }
+}
+
+.p-reason__card:nth-child(even) .p-reason__card-number {
+  left: myrem(165);
+  @include mq(md) {
+    left: myrem(12);
+  }
+}
+
+.p-reason__card-number::before,
+.p-reason__card-number::after {
+  content: "";
+  width: myrem(3);
+  height: myrem(1);
+  position: absolute;
+  top: 74%;
+  background-color: $pink3;
+  transform: rotate(90deg);
+  @include mq(md) {
+    width: myrem(4);
+    height: myrem(2);
+    top: 79%;
+  }
+}
+
+.p-reason__card-number::before {
+  left: myrem(-2);
+  @include mq(md) {
+    left: myrem(-3);
+  }
+}
+
+.p-reason__card-number::after {
+  right: myrem(-2);
+  @include mq(md) {
+    right: myrem(-3);
+  }
+}
+
+.p-reason__card-number span {
+  position: relative;
+  top: myrem(4);
+  left: myrem(-10);
+  z-index: -1;
+  font-size: myrem(39.81);
+  font-family: $font-sub;
+  font-style: italic;
+  color: $gold1;
+  @include mq(md) {
+    top: myrem(9);
+    left: myrem(7);
+    font-size: myrem(59);
+  }
+}
+
+.p-reason__card-number span::after {
+  counter-increment: number 1; /* number カウンタの増加数をセット */
+  content: counter(number) "."; /* 表示形式を指定 */
+  font-size: myrem(53.79);
+  font-family: $font-sub;
+  color: $gold1;
+  @include mq(md) {
+    font-size: myrem(76);
+  }
+}
+
+.p-reason__card-inner1 {
+  @include mq(md) {
+    margin-top: myrem(-74);
+    padding: 0 myrem(18) myrem(18) myrem(17);
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-reason__card-inner2 {
+  margin-top: myrem(-56);
+  padding: 0 myrem(8) myrem(13);
+  @include mq(md) {
+    margin-top: 0;
+    padding: 0;
+    width: 56%;
+  }
+}
+
+.p-reason__card-title {
+  font-size: myrem(18);
+  font-weight: 900;
+  @include mq(md) {
+    font-size: myrem(22);
+  }
+}
+
+.p-reason__card-title span:not(.p-reason__card-title-break) {
+  color: $pink1;
+  background: linear-gradient(transparent 60%, $pink2 30%);
+}
+
+.p-reason__card-title-break::after {
+  @include mq(md) {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+.p-reason__card-text {
+  padding-top: myrem(11);
+  font-size: myrem(16);
+  line-height: 1.4;
+  @include mq(md) {
+    padding-top: myrem(10);
+    line-height: 1.5;
+  }
+}
+
+.p-reason__card-text span {
+  background: linear-gradient(transparent 60%, $yellow 30%);
+}
