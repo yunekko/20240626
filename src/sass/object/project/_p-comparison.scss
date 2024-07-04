@@ -1,9 +1,6 @@
 @use "global" as *;
 
 .p-comparison {
-  // margin: myrem(40) auto 0;
-  // width: 100%;
-  // background-color: orange;
   background: repeating-linear-gradient(
     90deg,
     #fff,
@@ -23,7 +20,9 @@
 }
 
 .p-comparison__title {
+  margin: 0 auto;
   padding: myrem(14) 0;
+  width: myrem(345);
   position: relative;
   font-size: myrem(20);
   font-weight: 900;
@@ -38,6 +37,8 @@
   background-size: 51% 51%;
   @include mq(md) {
     padding: myrem(16) 0;
+    max-width: myrem(1000);
+    width: 100%;
     font-size: myrem(38);
     background: radial-gradient(circle at 0 100%, transparent 10px, $gold1 11px),
       radial-gradient(circle at 100% 100%, transparent 10px, $gold1 11px),
@@ -73,12 +74,14 @@
 
 .p-comparison__cards {
   margin: 0 auto;
+  padding-top: myrem(28);
   max-width: myrem(345);
   width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: myrem(25);
   @include mq(md) {
+    padding-top: myrem(61);
     max-width: myrem(1000);
     flex-direction: row-reverse;
     justify-content: center;
@@ -156,10 +159,12 @@
 
 .p-comparison__table {
   margin-left: myrem(15);
+  padding-top: myrem(34);
   padding-bottom: myrem(18);
   overflow-x: auto;
   @include mq(md) {
     margin: 0 auto;
+    padding-top: myrem(78);
     max-width: myrem(1000);
     overflow-x: unset;
   }

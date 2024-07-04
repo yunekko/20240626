@@ -35,7 +35,7 @@
     max-width: myrem(520);
     width: 100%;
     background-color: $pink10;
-    box-shadow: 0px 0px 8px rgba(1, 2, 0, 0.2);
+    box-shadow: 0 0 8px rgba(1, 2, 0, 0.2);
   }
 }
 
@@ -54,8 +54,8 @@
   color: $white;
   background-color: $gold1;
   @include mq(md) {
-    padding: myrem(1) 0 myrem(4);
     margin-left: myrem(53);
+    padding: myrem(1) 0 myrem(4);
     max-width: myrem(174);
     font-size: myrem(22);
     letter-spacing: myrem(1.5);

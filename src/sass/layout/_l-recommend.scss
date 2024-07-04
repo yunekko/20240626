@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.l-recommend {
+  padding-top: myrem(27);
+  padding-bottom: myrem(50);
+  @include mq(md) {
+    padding-bottom: 0;
+  }
+}

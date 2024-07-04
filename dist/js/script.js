@@ -38,10 +38,11 @@ jQuery(function ($) {
   });
 
   // アーチ状文字
-  $(".js-arch1").arctext({ radius: 210 });
+  $(".js-arch1").arctext({ radius: 180 });
   $(".js-arch2").arctext({ radius: 300 });
 });
 
+// ハンバーガーメニュー
 jQuery(function ($) {
   $(".p-header__hamburger").click(function () {
     $(this).toggleClass("is-active");
@@ -55,6 +56,64 @@ jQuery(function ($) {
       $("body").removeClass("active");
       $(".js-drawer").fadeOut();
     });
+  }
+});
+
+// フローティングメニュー
+var float = $(".p-float");
+var informationOffset = $(".p-information").offset().top;
+float.hide();
+if (window.matchMedia("(max-width: 768px)").matches) {
+  $(window).scroll(function () {
+    var scrollPosition = $(this).scrollTop();
+    if (scrollPosition > 50 && scrollPosition < informationOffset) {
+      float.fadeIn();
+    } else {
+      float.fadeOut();
+    }
+  });
+}
+
+// フェードイン
+$(document).ready(function () {
+  $(".fade-in-ready").addClass("scroll-in");
+});
+
+jQuery(function ($) {
+  var fadeIn = $(".fade-in");
+  $(window).scroll(function () {
+    $(fadeIn).each(function () {
+      var offset = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > offset - windowHeight + 150) {
+        $(this).addClass("scroll-in");
+      }
+    });
+  });
+});
+
+// アンダーライン
+jQuery(function ($) {
+  var underline = $(".js-underline");
+  $(window).scroll(function () {
+    $(underline).each(function () {
+      var offset = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > offset - windowHeight + 150) {
+        $(this).addClass("is-active");
+      }
+    });
+  });
+});
+
+// 治療の流れ(p-plan-bottom過ぎたら)
+$(window).on("scroll", function () {
+  var planBottomOffset = $(".p-plan-bottom").offset().top;
+  var scrollPosition = $(this).scrollTop();
+  if (scrollPosition > planBottomOffset) {
+    $(".p-flow__item").addClass("is-show");
   }
 });
 

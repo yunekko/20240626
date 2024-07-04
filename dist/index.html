@@ -1,31 +1,1078 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <!-- meta情報 -->
-  <title>タイトル</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- ファビコン -->
-  <link rel="icon" href="" />
-  <!-- css -->
-  <link rel="stylesheet" href="./css/styles.css">
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./js/script.js"></script>
-</head>
-<body>
-  <div class="l-inner">
-    <p class="p-test">TOPページです</p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- meta情報 -->
+    <title>SALON ASSIST</title>
+    <meta
+      name="description"
+      content="全身医療脱毛。梅田茶屋町院が新規オープンしました。コンセプトは、皮膚科医が監修する医療脱毛。全身脱毛最短90分で完了。医療脱毛なのに痛みが少ない。まずはLINEで無料カウンセリング。"
+    />
+    <meta
+      name="keywords"
+      content="全身医療脱毛。皮膚科医監修。痛みが少ない。"
+    />
+
+    <!-- ogp -->
+    <meta property="og:title" content="SALON ASSIST" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xs589126.xsrv.jp/" />
+    <meta
+      property="og:image"
+      content="https://xs589126.xsrv.jp/images/salon__picture-pc.jpg"
+    />
+    <meta property="og:site_name" content="SALON ASSIST" />
+    <meta
+      property="og:description"
+      content="SALON ASSIST/全身医療脱毛。梅田茶屋町院が新規オープンしました。コンセプトは、皮膚科医が監修する医療脱毛。全身脱毛最短90分で完了。医療脱毛なのに痛みが少ない。まずはLINEで無料カウンセリング。"
+    />
+
+    <!-- noindex -->
+    <meta name="ots" content="noindex" />
+    <!-- nofollow -->
+    <meta name="robots" content="nofollow" />
+
+    <!-- ファビコン -->
+    <link rel="icon" href="./images/favicon.ico" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Noto+Sans+JP:wght@100..900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="./js/jquery.arctext.js"></script>
+    <script defer src="./js/script.js"></script>
+  </head>
+
+  <body>
+    <!-- ヘッダー -->
+    <header class="p-header">
+      <div class="p-header__inner">
+        <h1 class="p-header__logo">
+          <a href="./index.html">
+            <img src="./images/logo.png" alt="サロンロゴ" />
+          </a>
+        </h1>
+        <nav class="p-header__nav js-drawer">
+          <ul class="p-header__nav-list">
+            <li class="p-header__nav-item">
+              <a href="#reason">サービス内容</a>
+            </li>
+            <li class="p-header__nav-item"><a href="#plan">料金プラン</a></li>
+            <li class="p-header__nav-item"><a href="#flow">施術の流れ</a></li>
+            <li class="p-header__nav-item"><a href="#faq">よくある質問</a></li>
+            <li class="p-header__nav-item u-mobile">
+              <a href="#">運営会社</a>
+            </li>
+            <li class="p-header__nav-item u-mobile">
+              <a href="#">プライバシーポリシー</a>
+            </li>
+          </ul>
+          <div class="p-header__information">
+            <div class="p-header__information-inner">
+              <p class="p-header__tel">050-3184-4476</p>
+              <p class="p-header__time">受付時間 11:00〜19:00（水曜日定休）</p>
+            </div>
+            <div class="p-header__button">
+              <a href="#" class="c-button c-button-top"
+                >まずは LINEで<br />無料カウンセリング
+                <span class="c-button__triangle c-button__triangle-top"></span>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <button class="p-header__hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <!-- メイン -->
+    <main class="l-main">
+      <!-- フローティングメニュー -->
+      <div class="p-float">
+        <div class="p-float__tel">
+          <a href="tel:05031844476">電話予約</a>
+        </div>
+        <div class="p-float__line">
+          <a href="#"
+            >まずはLINEで<br />
+            無料カウンセリング</a
+          >
+        </div>
+      </div>
+
+      <!--  ファーストビュー -->
+      <div class="p-fv">
+        <div class="p-fv__inner1">
+          <div class="p-fv__inner2 fade-in-ready fade-in fade-in--delay1">
+            <div class="p-fv__inner3">
+              <p class="p-fv__text1">梅田茶屋町院</p>
+              <p class="p-fv__text2">
+                <span>新規医院オープン</span>記念キャンペーン
+              </p>
+              <p class="p-fv__title"><span>全身医療</span>脱毛</p>
+              <div class="p-fv__image">
+                <picture>
+                  <source
+                    srcset="./images/title__line-pc.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img src="./images/title__line.png" alt="ラインの装飾" />
+                </picture>
+              </div>
+              <div class="p-fv__information">
+                <div class="p-fv__information-texts1">
+                  <p class="p-fv__information-text1">全５回</p>
+                  <p class="p-fv__information-text1">ライトコース</p>
+                </div>
+                <div class="p-fv__information-texts2">
+                  <p class="p-fv__information-text2">5,800<span>円</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="p-fv__cards">
+              <div class="p-fv__card">
+                <span>皮膚科医</span>が<br /><span>監修</span>する<br />医療脱毛
+              </div>
+              <div class="p-fv__card">
+                全身脱毛<br /><span>90</span><br />で完了
+              </div>
+              <div class="p-fv__card">
+                医療脱毛なのに<br /><span>痛みが</span><br /><span>少ない</span>
+              </div>
+            </div>
+            <p class="p-fv__text3">
+              ※月々5,800円（税別）は30回払いの医療ローンでお支払いいただいた場合の、ローン手数料込みのお値段になります。<br />※医療脱毛は全て自費診療となります。
+            </p>
+          </div>
+          <div class="p-fv__logo u-mobile fade-in-ready fade-in">
+            <img src="./images/fv__logo-sp.png" alt="サロンのロゴ" />
+          </div>
+          <div class="p-fv__logo u-desktop fade-in-ready fade-in">
+            <img src="./images/fv__logo-pc.png" alt="サロンのロゴ" />
+          </div>
+        </div>
+      </div>
+
+      <!-- お悩みリスト -->
+      <div class="p-worries l-worries">
+        <div class="p-worries__wrapper">
+          <ul class="p-worries__list">
+            <li class="p-worries__top-title">
+              こんな<span>お悩み</span>ありませんか？
+            </li>
+            <li class="p-worries__item">
+              安価の脱毛器を試したけど
+              <span class="js-underline"> 効果が得られなかった</span>
+            </li>
+            <li class="p-worries__item">
+              外国製の脱毛器を購入したけど、
+              <span class="js-underline">すぐ壊れてしまった</span>
+            </li>
+            <li class="p-worries__item">
+              カミソリでのお手入れを<span class="js-underline"
+                >面倒に感じる</span
+              >
+            </li>
+            <li class="p-worries__item">
+              エステ脱毛は高いし<span class="js-underline">予約が面倒</span>
+            </li>
+            <li class="p-worries__item">
+              家の処理で<span class="js-underline"
+                >肌が荒れたりかぶれたりする</span
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- おすすめ-->
+      <div class="p-recommend l-recommend">
+        <div class="p-recommend__container">
+          <div class="p-recommend__catch">
+            SALON ASSISTは<br />そんな方におすすめです！
+          </div>
+          <div class="p-recommend__triangle"></div>
+          <div class="p-recommend__bottom fade-in fade-in-down">
+            <p class="p-recommend__title">
+              SALON ASSISTを利用した方の多くの方が
+            </p>
+            <p class="p-recommend__title2">
+              <span> 圧倒的な効果</span>
+              を実感
+            </p>
+          </div>
+          <div class="p-recommend__inner">
+            <div class="p-recommend__graph">
+              <p class="p-recommend__text1"><span>1</span> 回目の施術で</p>
+              <p class="p-recommend__text2">89<span>%</span></p>
+              <p class="p-recommend__text3">効果を実感！</p>
+            </div>
+            <div class="p-recommend__graph p-recommend__graph2">
+              <p class="p-recommend__text1 p-recommend__text1-2">
+                <span>2</span> 回目の施術で
+              </p>
+              <p
+                class="p-recommend__text2 p-recommend__text2--gold p-recommend__text2-2"
+              >
+                93<span>%</span>
+              </p>
+              <p class="p-recommend__text3 p-recommend__text3-2">
+                効果を実感！
+              </p>
+            </div>
+          </div>
+          <p class="p-recommend__text-bottom">※自社アンケート調べ</p>
+        </div>
+      </div>
+
+      <!-- 6つの理由 -->
+      <section id="reason" class="p-reason l-reason">
+        <div class="p-reason__inner">
+          <div class="p-reason__image">
+            <img src="./images/reason__top.png" alt="女性の写真" />
+          </div>
+          <div class="p-reason__title-box">
+            <p class="p-reason__sub-title u-mobile js-arch1">
+              SALON ASSISTが選ばれる
+            </p>
+            <p class="p-reason__sub-title u-desktop js-arch2">
+              SALON ASSISTが選ばれる
+            </p>
+            <h2 class="p-reason__title">
+              6
+              <span>つの理由</span>
+            </h2>
+          </div>
+
+          <ul class="p-reason__cards">
+            <li class="p-reason__card fade-in fade-in-up">
+              <div class="p-reason__card-image">
+                <img src="./images/reason1-sp.jpg" alt="サロンの写真" />
+              </div>
+              <div class="p-reason__card-body">
+                <p class="p-reason__card-number">reason<span>0</span></p>
+                <div class="p-reason__card-inner1">
+                  <div class="p-reason__card-inner2">
+                    <p class="p-reason__card-title">
+                      <span class="p-reason__card-title-break"> 圧倒的！</span
+                      ><span>都内最大級</span>の価格
+                    </p>
+                    <p class="p-reason__card-text">
+                      エステ脱毛と比較すると、<span>医療行為である医療レーザー脱毛は価格が高い印象</span>をお持ちではありませんか？当クリニックは圧倒的な安さで高品質な施術をお約束します。
+                    </p>
+                  </div>
+                  <div class="p-reason__card-image2">
+                    <img src="./images/reason1-pc.jpg" alt="サロンの写真" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="p-reason__card fade-in fade-in-up">
+              <div class="p-reason__card-image">
+                <img src="./images/reason2-sp.jpg" alt="女性の写真" />
+              </div>
+              <div class="p-reason__card-body">
+                <p class="p-reason__card-number">reason<span>0</span></p>
+                <div class="p-reason__card-inner1">
+                  <div class="p-reason__card-inner2">
+                    <p class="p-reason__card-title">
+                      <span class="p-reason__card-title-break">
+                        医療脱毛だから</span
+                      ><span>痛みが少ない！</span>
+                    </p>
+                    <p class="p-reason__card-text">
+                      比較的穏やかなレーザーでじっくりと照射を行うので、<span>肌に優しく、痛みが少ない</span>のが特徴です。
+                    </p>
+                  </div>
+                  <div class="p-reason__card-image2">
+                    <img src="./images/reason2-pc.jpg" alt="女性の写真" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="p-reason__card fade-in fade-in-up">
+              <div class="p-reason__card-image">
+                <img src="./images/reason3-sp.jpg" alt="脱毛の機械の写真" />
+              </div>
+              <div class="p-reason__card-body">
+                <p class="p-reason__card-number">reason<span>0</span></p>
+                <div class="p-reason__card-inner1">
+                  <div class="p-reason__card-inner2">
+                    <p class="p-reason__card-title">
+                      <span class="p-reason__card-title-break">
+                        <span>完全個室で対応</span>で</span
+                      >安心施術。
+                    </p>
+                    <p class="p-reason__card-text">
+                      患者様のプライバシーを守り、<span>リラックス</span>して施術を受けることができます。
+                    </p>
+                  </div>
+                  <div class="p-reason__card-image2">
+                    <img src="./images/reason3-pc.jpg" alt="脱毛の機械の写真" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="p-reason__card fade-in fade-in-up">
+              <div class="p-reason__card-image">
+                <img
+                  src="./images/reason4-sp.jpg"
+                  alt="脱毛器と女性のスタッフ"
+                />
+              </div>
+              <div class="p-reason__card-body">
+                <p class="p-reason__card-number">reason<span>0</span></p>
+                <div class="p-reason__card-inner1">
+                  <div class="p-reason__card-inner2">
+                    <p class="p-reason__card-title">
+                      <span class="p-reason__card-title-break">
+                        <span>最新脱毛器完備</span></span
+                      >だから効果は絶大！
+                    </p>
+                    <p class="p-reason__card-text">
+                      最新の脱毛器を使用することにより、<span>毛が生える原因を的確に狙えるので効果が抜群</span>です。「毛が再生する前提」で行われるエステサロンでの脱毛とは全く違います。
+                    </p>
+                  </div>
+                  <div class="p-reason__card-image2">
+                    <img
+                      src="./images/reason4-pc.jpg"
+                      alt="脱毛器と女性のスタッフ"
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="p-reason__card fade-in fade-in-up">
+              <div class="p-reason__card-image">
+                <img src="./images/reason5-sp.jpg" alt="施術時の写真" />
+              </div>
+              <div class="p-reason__card-body">
+                <p class="p-reason__card-number">reason<span>0</span></p>
+                <div class="p-reason__card-inner1">
+                  <div class="p-reason__card-inner2">
+                    <p class="p-reason__card-title">
+                      <span
+                        ><span class="p-reason__card-title-break"
+                          >全身脱毛でも</span
+                        >施術時間が短い！</span
+                      >
+                    </p>
+                    <p class="p-reason__card-text">
+                      エステ脱毛と比較すると、<span>医療行為である医療レーザー脱毛は価格が高い印象</span>をお持ちではありませんか？当クリニックは圧倒的な安さで高品質な施術をお約束します。
+                    </p>
+                  </div>
+                  <div class="p-reason__card-image2">
+                    <img src="./images/reason5-pc.jpg" alt="施術時の写真" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="p-reason__card fade-in fade-in-up">
+              <div class="p-reason__card-image">
+                <img
+                  src="./images/reason6-sp.jpg"
+                  alt="スタッフから説明を受けている女性の写真"
+                />
+              </div>
+              <div class="p-reason__card-body">
+                <p class="p-reason__card-number">reason<span>0</span></p>
+                <div class="p-reason__card-inner1">
+                  <div class="p-reason__card-inner2">
+                    <p class="p-reason__card-title">
+                      <span class="p-reason__card-title-break">
+                        新規オープンだから</span
+                      ><span>予約が取りやすい！</span>
+                    </p>
+                    <p class="p-reason__card-text">
+                      <span>オープンしたばかりのクリニック</span
+                      >なので、予約がとれず、思ったように施術が出来なくて、ストレスを感じる、ということも少ないのもメリットの１つです。
+                    </p>
+                  </div>
+                  <div class="p-reason__card-image2">
+                    <img
+                      src="./images/reason6-pc.jpg"
+                      alt="スタッフから説明を受けている女性の写真"
+                    />
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 料金プラン -->
+      <section id="plan" class="p-plan l-plan">
+        <h2 class="p-plan__title">選べる料金プラン</h2>
+        <div class="p-plan__cards fade-in fade-in-down">
+          <div class="p-plan__card">
+            <p class="p-plan__card-title">全身医療脱毛ライト</p>
+            <p class="p-plan__card-sub-title">見えるところだけ</p>
+            <div class="p-plan__card-inner">
+              <div class="p-plan__card-head">
+                <p class="p-plan__card-part">両ワキ</p>
+                <p class="p-plan__card-part">両うで</p>
+                <p class="p-plan__card-part">両あし</p>
+                <p class="p-plan__card-part">手の指</p>
+                <p class="p-plan__card-part">手の甲</p>
+                <p class="p-plan__card-part">足の指</p>
+                <p class="p-plan__card-part">背中上部</p>
+              </div>
+              <div class="p-plan__card-bottom">
+                <div class="p-plan__card-course">
+                  5
+                  <span>回</span>
+                </div>
+                <div class="p-plan__card-price-box">
+                  <div class="p-plan__card-price">
+                    5,800
+                    <span>円</span>
+                  </div>
+                  <div class="p-plan__card-total-price">
+                    コース金額<span>150,000</span>円
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-plan__card p-plan__card--green">
+            <p class="p-plan__card-title p-plan__card-title--green">
+              全身＋顔＋VIO脱毛
+            </p>
+            <p class="p-plan__card-sub-title p-plan__card-sub-title2">
+              髪の毛と足の裏以外全部位！
+            </p>
+            <div class="p-plan__card-inner p-plan__card-inner2">
+              <div class="p-plan__card-head p-plan__card-head2">
+                <p class="p-plan__card-part p-plan__card-part--green">両ワキ</p>
+                <p class="p-plan__card-part p-plan__card-part--green">両うで</p>
+                <p class="p-plan__card-part p-plan__card-part--green">両あし</p>
+                <p class="p-plan__card-part p-plan__card-part--green">
+                  手の指甲
+                </p>
+                <p class="p-plan__card-part p-plan__card-part--green">
+                  背中全体
+                </p>
+                <p class="p-plan__card-part p-plan__card-part--green">腰</p>
+                <p class="p-plan__card-part p-plan__card-part--green">お尻</p>
+                <p class="p-plan__card-part p-plan__card-part--green">お腹</p>
+                <p class="p-plan__card-part p-plan__card-part--green">バスト</p>
+                <p class="p-plan__card-part p-plan__card-part--green">うなじ</p>
+                <p class="p-plan__card-part p-plan__card-part--green">顔</p>
+                <p class="p-plan__card-part p-plan__card-part--green">VIO</p>
+              </div>
+              <div class="p-plan__card-bottom">
+                <div class="p-plan__card-course">
+                  5
+                  <span>回</span>
+                </div>
+                <div class="p-plan__card-price-box">
+                  <div class="p-plan__card-price p-plan__card-price--green">
+                    9,600
+                    <span>円</span>
+                  </div>
+                  <div
+                    class="p-plan__card-total-price p-plan__card-total-price2"
+                  >
+                    コース金額<span> 250,000</span>円
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="p-plan__text">
+          ※月々5,800円（税別）・月々9,600
+          円は30回払いの医療ローンでお支払いいただいた場合の、ローン手数料込みのお値段になります。
+          <br />※医療脱毛は全て自費診療となります。
+        </p>
+        <div class="p-plan__button">
+          <a href="#" class="c-button"
+            >まずは LINEで<br />無料カウンセリング
+            <span class="c-button__triangle"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 比較 -->
+      <section class="p-comparison l-comparison">
+        <h2 class="p-comparison__title">医療脱毛とエステ脱毛の違い</h2>
+        <div class="p-comparison__cards">
+          <div class="p-comparison__card fade-in fade-in-left">
+            <p class="p-comparison__card-title">エステ脱毛</p>
+            <div class="p-comparison__card-image">
+              <img src="./images/figure2.png" alt="脱毛段階のイメージ画像" />
+            </div>
+            <div class="p-comparison__card-texts">
+              <p class="p-comparison__card-text">
+                照射力が弱く、<br />毛乳頭を破壊出来ない
+              </p>
+              <p class="p-comparison__card-text">
+                一次的な脱毛で、 <br />また毛が生える
+              </p>
+              <p class="p-comparison__card-text">永久脱毛は不可</p>
+            </div>
+          </div>
+          <div class="p-comparison__card fade-in fade-in-left">
+            <p class="p-comparison__card-title p-comparison__card-title--pink">
+              医療脱毛
+            </p>
+            <div class="p-comparison__card-image">
+              <img src="./images/figure1.png" alt="脱毛段階のイメージ画像" />
+            </div>
+            <div class="p-comparison__card-texts">
+              <p class="p-comparison__card-text">
+                バルジ領域にある<br />幹細胞がターゲット
+              </p>
+              <p class="p-comparison__card-text">
+                加熱しても毛根の<br />温度は65°程度
+              </p>
+              <p class="p-comparison__card-text">
+                痛みが少ない<br />肌にやさしい<br />永久脱毛が可能
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 比較表 -->
+        <div class="p-comparison__table">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th
+                  class="p-comparison__table-title p-comparison__table-title--pink"
+                >
+                  ASSIST SALONの<br />医療脱毛（単発式）
+                </th>
+                <th
+                  class="p-comparison__table-title p-comparison__table-title--green"
+                >
+                  医療脱毛（蓄熱式）
+                </th>
+                <th
+                  class="p-comparison__table-title p-comparison__table-title--green"
+                >
+                  エステ脱毛（光脱毛）
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="p-comparison__table-row">
+                <th class="p-comparison__table-title">効果</th>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--pink"
+                >
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">
+                    毛根にダメージを与える為<br />半永久的な脱毛効果が期待できる
+                  </p>
+                </td>
+                <td class="p-comparison__table-data">
+                  <div class="p-comparison__table-icon">○</div>
+                  <p class="p-comparison__table-text">
+                    発毛を促すバルジ領域にダメージ<br />半永久効果とされるが実績は少ない
+                  </p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    △
+                  </div>
+                  <p class="p-comparison__table-text">
+                    毛根まで届かないので一時的な原毛<br />再度発毛する可能性が高い
+                  </p>
+                </td>
+              </tr>
+              <tr class="p-comparison__table-row">
+                <th
+                  class="p-comparison__table-title p-comparison__table-title--dot"
+                >
+                  回数<br />期間
+                </th>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--pink"
+                >
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">
+                    照射パワーが強い為<br />少ない回数・短期間で脱毛完了
+                  </p>
+                </td>
+                <td class="p-comparison__table-data">
+                  <div class="p-comparison__table-icon">○</div>
+                  <p class="p-comparison__table-text">
+                    照射パワーは強いが<br />それなりに回数・期間が必要
+                  </p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    ×
+                  </div>
+                  <p class="p-comparison__table-text">
+                    照射パワーが弱い為<br />回数が多く長期的な脱毛が必要
+                  </p>
+                </td>
+              </tr>
+              <tr class="p-comparison__table-row">
+                <th class="p-comparison__table-title">速攻性</th>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--pink"
+                >
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">早期に効果を実感できる</p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    △
+                  </div>
+                  <p class="p-comparison__table-text">
+                    効果が出るまでに時間がかかる
+                  </p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    ×
+                  </div>
+                  <p class="p-comparison__table-text">
+                    効果が出るまでかなり時間がかかる
+                  </p>
+                </td>
+              </tr>
+              <tr class="p-comparison__table-row">
+                <th class="p-comparison__table-title">デザイン性</th>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--pink"
+                >
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">
+                    顔やVIO、うなじなど細かい部位<br />でもデザイン可能
+                  </p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    △
+                  </div>
+                  <p class="p-comparison__table-text">
+                    顔やVIO、うなじなど細かい部位<br />へのデザインには不向き
+                  </p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    ×
+                  </div>
+                  <p class="p-comparison__table-text">
+                    脱毛効果が弱い為<br />デザインできない
+                  </p>
+                </td>
+              </tr>
+              <tr class="p-comparison__table-row">
+                <th class="p-comparison__table-title">施術者</th>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--pink"
+                >
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">
+                    医師・看護師が対応<br />（有資格者）
+                  </p>
+                </td>
+                <td class="p-comparison__table-data">
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">
+                    医師・看護師が対応<br />（有資格者）
+                  </p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    ×
+                  </div>
+                  <p class="p-comparison__table-text">
+                    サロンスタッフが対応<br />（必要な資格は無し）
+                  </p>
+                </td>
+              </tr>
+              <tr class="p-comparison__table-row">
+                <th class="p-comparison__table-title">
+                  トラブル時<br />の対応
+                </th>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--pink"
+                >
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">医師による診察</p>
+                </td>
+                <td class="p-comparison__table-data">
+                  <div class="p-comparison__table-icon">◎</div>
+                  <p class="p-comparison__table-text">医師による診察</p>
+                </td>
+                <td
+                  class="p-comparison__table-data p-comparison__table-data--gray"
+                >
+                  <div
+                    class="p-comparison__table-icon p-comparison__table-icon--bad"
+                  >
+                    ×
+                  </div>
+                  <p class="p-comparison__table-text">カウンセラーのみ</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 料金プラン -->
+      <section class="p-plan p-plan-bottom l-plan l-plan-bottom">
+        <h2 class="p-plan__title">選べる料金プラン</h2>
+        <div class="p-plan__cards p-plan__cards-bottom fade-in fade-in-down">
+          <div class="p-plan__card">
+            <p class="p-plan__card-title">全身医療脱毛ライト</p>
+            <p class="p-plan__card-sub-title">見えるところだけ</p>
+            <div class="p-plan__card-inner">
+              <div class="p-plan__card-head">
+                <p class="p-plan__card-part">両ワキ</p>
+                <p class="p-plan__card-part">両うで</p>
+                <p class="p-plan__card-part">両あし</p>
+                <p class="p-plan__card-part">手の指</p>
+                <p class="p-plan__card-part">手の甲</p>
+                <p class="p-plan__card-part">足の指</p>
+                <p class="p-plan__card-part">背中上部</p>
+              </div>
+              <div class="p-plan__card-bottom">
+                <div class="p-plan__card-course">
+                  5
+                  <span>回</span>
+                </div>
+                <div class="p-plan__card-price-box">
+                  <div class="p-plan__card-price">
+                    5,800
+                    <span>円</span>
+                  </div>
+                  <div class="p-plan__card-total-price">
+                    コース金額<span>150,000</span>円
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-plan__card p-plan__card--green">
+            <p class="p-plan__card-title p-plan__card-title--green">
+              全身＋顔＋VIO脱毛
+            </p>
+            <p class="p-plan__card-sub-title p-plan__card-sub-title2">
+              髪の毛と足の裏以外全部位！
+            </p>
+            <div class="p-plan__card-inner p-plan__card-inner2">
+              <div class="p-plan__card-head p-plan__card-head2">
+                <p class="p-plan__card-part p-plan__card-part--green">両ワキ</p>
+                <p class="p-plan__card-part p-plan__card-part--green">両うで</p>
+                <p class="p-plan__card-part p-plan__card-part--green">両あし</p>
+                <p class="p-plan__card-part p-plan__card-part--green">
+                  手の指甲
+                </p>
+                <p class="p-plan__card-part p-plan__card-part--green">
+                  背中全体
+                </p>
+                <p class="p-plan__card-part p-plan__card-part--green">腰</p>
+                <p class="p-plan__card-part p-plan__card-part--green">お尻</p>
+                <p class="p-plan__card-part p-plan__card-part--green">お腹</p>
+                <p class="p-plan__card-part p-plan__card-part--green">バスト</p>
+                <p class="p-plan__card-part p-plan__card-part--green">うなじ</p>
+                <p class="p-plan__card-part p-plan__card-part--green">顔</p>
+                <p class="p-plan__card-part p-plan__card-part--green">VIO</p>
+              </div>
+              <div class="p-plan__card-bottom">
+                <div class="p-plan__card-course">
+                  5
+                  <span>回</span>
+                </div>
+                <div class="p-plan__card-price-box">
+                  <div class="p-plan__card-price p-plan__card-price--green">
+                    9,600
+                    <span>円</span>
+                  </div>
+                  <div
+                    class="p-plan__card-total-price p-plan__card-total-price2"
+                  >
+                    コース金額<span> 250,000</span>円
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="p-plan__text p-plan__text-bottom">
+          ※月々5,800円（税別）・月々9,600
+          円は30回払いの医療ローンでお支払いいただいた場合の、ローン手数料込みのお値段になります。
+          <br />※医療脱毛は全て自費診療となります。
+        </p>
+        <div class="p-plan__button">
+          <a href="#" class="c-button"
+            >まずは LINEで<br />無料カウンセリング
+            <span class="c-button__triangle"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 施術の流れ -->
+      <section id="flow" class="p-flow l-flow">
+        <h2 class="p-flow__title">施術の流れ</h2>
+        <div class="p-flow__image">
+          <picture>
+            <source
+              srcset="./images/title__line-pc.png"
+              media="(min-width: 768px)"
+            />
+            <img src="./images/title__line.png" alt="ラインの装飾" />
+          </picture>
+        </div>
+        <div class="p-flow__wrapper">
+          <div class="p-flow__wrapper-image u-mobile">
+            <img src="./images/flow__top.png" alt="女性の写真" />
+          </div>
+          <div class="p-flow__wrapper-image u-desktop">
+            <img src="./images/flow__top-pc.png" alt="女性の写真" />
+          </div>
+          <ul class="p-flow__list">
+            <li class="p-flow__item">
+              <div class="p-flow__head">
+                <p class="p-flow__step">step<span></span></p>
+                <p class="p-flow__item-title">ご予約</p>
+              </div>
+              <div class="p-flow__text">
+                まずは予約フォームからお申し込みください。お電話、LINEでもご予約可能です。
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__head">
+                <p class="p-flow__step">step<span></span></p>
+                <p class="p-flow__item-title">ご来院</p>
+              </div>
+              <div class="p-flow__text">
+                施術当日はご予約時間の５分前を目安にご来院ください。
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__head">
+                <p class="p-flow__step">step<span></span></p>
+                <p class="p-flow__item-title">カウンセリング</p>
+              </div>
+              <div class="p-flow__text">
+                全身脱毛について分からない事や不安なことがありましたら何でも気軽にご相談ください。<br />
+                施術前に不安をなくすことで、安心して施術をしていただけます！
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__head">
+                <p class="p-flow__step">step<span></span></p>
+                <p class="p-flow__item-title">照射開始</p>
+              </div>
+              <div class="p-flow__text">
+                最新式脱毛器で優しく安全にムダ毛を処理していきます。痛みも少なく短時間で終わりますので、ご安心ください。
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__head">
+                <p class="p-flow__step">step<span></span></p>
+                <p class="p-flow__item-title">アフターケア</p>
+              </div>
+              <div class="p-flow__text">
+                脱毛の施術後は、お肌の乾燥への注意が欠かせません。<br />
+                ASSIST SALONではしっかりと保湿ケアも徹底しています。
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- よくある質問-->
+      <section id="faq" class="p-faq l-faq">
+        <p class="p-faq__sub-title fade-in fade-in-up">&</p>
+        <h2 class="p-faq__title">よくある質問</h2>
+        <ul class="p-faq__list">
+          <li class="p-faq__item">
+            <div
+              class="p-faq__question p-faq__question-1 js-accordion-title open"
+            >
+              <p class="p-faq__question-icon">Q</p>
+              <p class="p-faq__question-text p-faq__question-text1">
+                どんな支払い方法がありますか？
+              </p>
+            </div>
+            <div class="p-faq__answer">
+              <p class="p-faq__answer-icon p-faq__answer-icon--green">A</p>
+              <p class="p-faq__answer-text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+          <li class="p-faq__item">
+            <div class="p-faq__question js-accordion-title">
+              <p class="p-faq__question-icon">Q</p>
+              <p class="p-faq__question-text">
+                痛いのが本当に苦手なんですが•••
+              </p>
+            </div>
+            <div class="p-faq__answer">
+              <p class="p-faq__answer-icon p-faq__answer-icon--green">A</p>
+              <p class="p-faq__answer-text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+          <li class="p-faq__item">
+            <div class="p-faq__question js-accordion-title">
+              <p class="p-faq__question-icon">Q</p>
+              <p class="p-faq__question-text">敏感肌でも脱毛できますか？</p>
+            </div>
+            <div class="p-faq__answer">
+              <p class="p-faq__answer-icon p-faq__answer-icon--green">A</p>
+              <p class="p-faq__answer-text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+          <li class="p-faq__item">
+            <div class="p-faq__question js-accordion-title">
+              <p class="p-faq__question-icon">Q</p>
+              <p class="p-faq__question-text">予約は取りやすいですか？</p>
+            </div>
+            <div class="p-faq__answer">
+              <p class="p-faq__answer-icon p-faq__answer-icon--green">A</p>
+              <p class="p-faq__answer-text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+          <li class="p-faq__item">
+            <div class="p-faq__question js-accordion-title">
+              <p class="p-faq__question-icon">Q</p>
+              <p class="p-faq__question-text">
+                契約回数で毛が残ってしまった場合、追加で通院できますか？
+              </p>
+            </div>
+            <div class="p-faq__answer">
+              <p class="p-faq__answer-icon p-faq__answer-icon--green">A</p>
+              <p class="p-faq__answer-text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- インフォメーション -->
+      <section class="p-information l-information">
+        <h2 class="p-information__title">SALON ASSIST</h2>
+        <div class="p-information__image">
+          <picture>
+            <source
+              srcset="./images/title__line-pc.png"
+              media="(min-width: 768px)"
+            />
+            <img src="./images/title__line.png" alt="ラインの装飾" />
+          </picture>
+        </div>
+        <div class="p-information__container">
+          <div class="p-information__inner">
+            <ul class="p-information__list">
+              <li class="p-information__item">
+                <p class="p-information__item-title">住所</p>
+                <p class="p-information__item-text">
+                  〒000-0000<br />大阪府大阪市北区茶屋町00-00
+                </p>
+              </li>
+              <li class="p-information__item">
+                <p class="p-information__item-title">電話番号</p>
+                <p class="p-information__item-text">0120-000-000</p>
+              </li>
+              <li class="p-information__item">
+                <p class="p-information__item-title">営業時間</p>
+                <p class="p-information__item-text">11:00〜20:00</p>
+              </li>
+              <li class="p-information__item">
+                <p class="p-information__item-title">定休日</p>
+                <p class="p-information__item-text">不定休</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="p-information__access">
+          <div class="p-information__access-title">access</div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3279.935792721171!2d135.49679452620984!3d34.706799372917416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6910a8e1151%3A0x83b2b8617ec9b7f3!2z44CSNTMwLTAwMTMg5aSn6Ziq5bqc5aSn6Ziq5biC5YyX5Yy66Iy25bGL55S6!5e0!3m2!1sja!2sjp!4v1719625493010!5m2!1sja!2sjp"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="p-footer l-footer">
+      <div class="p-footer__container">
+        <p class="p-footer__logo">SALON ASSIST</p>
+        <nav class="p-footer__nav">
+          <ul class="p-footer__nav-list1">
+            <li class="p-footer__nav-item1">
+              <a href="#reason">サービス内容</a>
+            </li>
+            <li class="p-footer__nav-item1"><a href="#plan">料金プラン</a></li>
+            <li class="p-footer__nav-item1"><a href="#flow">施術の流れ</a></li>
+            <li class="p-footer__nav-item1"><a href="#faq">よくある質問</a></li>
+          </ul>
+          <ul class="p-footer__nav-list2">
+            <li class="p-footer__nav-item2"><a href="#">運営会社</a></li>
+            <li class="p-footer__nav-item2">
+              <a href="#">プライバシーポリシー</a>
+            </li>
+          </ul>
+        </nav>
+        <small>&copy;2024 Salon Assist</small>
+      </div>
+    </footer>
+  </body>
 </html>

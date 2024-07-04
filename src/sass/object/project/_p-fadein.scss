@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.fade-in {
+  opacity: 0;
+  transition-duration: 1000ms;
+  transition-property: opacity, transform;
+}
+
+.fade-in--delay1 {
+  transition-delay: 400ms;
+}
+
+.fade-in-up {
+  transform: translate(0, 10%);
+}
+
+.fade-in-down {
+  transform: translate(0, -10%);
+}
+
+.fade-in-left {
+  transform: translate(-10%, 0);
+}
+
+.fade-in-right {
+  transform: translate(10%, 0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}

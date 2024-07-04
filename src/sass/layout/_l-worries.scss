@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-worries {
+  padding-top: myrem(114);
+  @include mq(md) {
+    padding-top: myrem(77);
+  }
+}

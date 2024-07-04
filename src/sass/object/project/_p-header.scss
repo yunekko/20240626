@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   @include mq(md) {
-    padding-left: myrem(70);
+    padding-left: myrem(50);
   }
 }
 
@@ -63,7 +63,7 @@
 
 .p-header__nav-item:not(:first-child) {
   @include mq(md) {
-    margin-left: myrem(8);
+    margin-left: myrem(13);
   }
 }
 
@@ -110,7 +110,7 @@
 .p-header__information {
   display: none;
   @include mq(md) {
-    margin-left: myrem(15);
+    margin-left: myrem(25);
     height: inherit;
     display: flex;
     align-items: center;
@@ -161,7 +161,6 @@
 .p-header__button {
   display: none;
   @include mq(md) {
-    padding-top: myrem(9);
     width: myrem(203);
     display: block;
   }

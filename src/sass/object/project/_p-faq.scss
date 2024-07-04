@@ -6,12 +6,13 @@
 
 .p-faq::before {
   content: "";
-  width: myrem(210);
-  height: myrem(45);
+  width: myrem(380);
+  height: myrem(75);
   position: absolute;
-  top: -32px;
-  left: 6px;
-  clip-path: polygon(0 50%, 100% 0%, 100% 100%);
+  top: myrem(18);
+  right: 0;
+  z-index: -10;
+  clip-path: polygon(0 37%, 100% 0%, 100% 100%);
   background: linear-gradient(to right, $white, $pink1);
   @include mq(md) {
     content: none;
@@ -23,7 +24,7 @@
   width: myrem(250);
   height: myrem(35);
   position: absolute;
-  bottom: -32px;
+  bottom: 0;
   left: 0;
   clip-path: polygon(0 0, 100% 100%, 0 100%);
   background: linear-gradient(to left, $white, $pink1);
@@ -38,7 +39,8 @@
   position: relative;
   font-size: myrem(30);
   font-weight: 400;
-  font-family: $font-cinzel;
+  font-family: $font-sub;
+  font-style: italic;
   color: $pink5;
   @include mq(md) {
     font-size: myrem(69);
@@ -48,12 +50,13 @@
 .p-faq__sub-title::before {
   content: "Q";
   position: absolute;
-  top: myrem(-17);
-  left: myrem(-39);
+  top: myrem(-15);
+  left: myrem(-35);
   font-size: myrem(40);
+  font-style: normal;
   @include mq(md) {
-    top: myrem(-41);
-    left: myrem(-91);
+    top: myrem(-44);
+    left: myrem(-84);
     font-size: myrem(95);
   }
 }
@@ -62,17 +65,18 @@
   content: "A";
   position: absolute;
   top: myrem(-6);
-  left: myrem(28);
+  left: myrem(34);
   font-size: myrem(40);
+  font-style: normal;
   @include mq(md) {
-    top: myrem(-16);
-    left: myrem(65);
+    top: myrem(-20);
+    left: myrem(79);
     font-size: myrem(95);
   }
 }
 
 .p-faq__title {
-  margin: 0 auto;
+  margin: myrem(7) auto 0;
   width: fit-content;
   position: relative;
   font-size: myrem(18);
@@ -116,14 +120,14 @@
 
 .p-faq__list {
   margin: 0 auto;
-  padding: 0 myrem(15);
+  padding: myrem(28) myrem(15) 0;
   max-width: myrem(375);
   width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: myrem(19);
   @include mq(md) {
-    padding: 0 myrem(200);
+    padding: myrem(45) myrem(200) 0;
     max-width: myrem(1400);
     row-gap: myrem(23);
   }
@@ -132,10 +136,17 @@
 .p-faq__question {
   padding: myrem(14) 0 myrem(13) myrem(15);
   display: flex;
+  align-items: center;
   background-color: $pink2;
   cursor: pointer;
   @include mq(md) {
-    padding: myrem(11) 0 myrem(14) myrem(26);
+    padding: myrem(12) 0 myrem(13) myrem(25);
+  }
+}
+
+.p-faq__question-1 {
+  @include mq(md) {
+    padding: myrem(20) 0 myrem(9) myrem(26);
   }
 }
 
@@ -148,7 +159,7 @@
   justify-content: center;
   color: $white;
   font-size: myrem(18);
-  font-family: $font-cinzel;
+  font-family: $font-sub;
   border-radius: 50%;
   background-color: $pink6;
   @include mq(md) {
@@ -176,13 +187,13 @@
   padding: myrem(3) myrem(21) 0 myrem(12);
   position: relative;
   @include mq(md) {
-    padding: myrem(16) myrem(21) 0 myrem(25);
+    padding: 0 0 0 myrem(24);
   }
 }
 
 .p-faq__question-text1 {
   @include mq(md) {
-    padding: myrem(18) 0 0 myrem(23);
+    padding: 0 0 0 myrem(22);
   }
 }
 

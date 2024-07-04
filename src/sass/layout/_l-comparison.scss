@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-comparison {
+  padding-top: myrem(60);
+  padding-bottom: myrem(60);
+  @include mq(md) {
+    padding-top: myrem(114);
+    padding-bottom: myrem(103);
+  }
+}

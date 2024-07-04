@@ -10,15 +10,16 @@
   text-align: center;
   color: $white;
   @include mq(md) {
+    padding-right: myrem(7);
     font-size: myrem(38);
   }
 }
 
 .p-information__image {
-  margin: 0 auto;
+  margin: myrem(-17) auto 0;
   width: myrem(170);
   @include mq(md) {
-    margin-top: myrem(7);
+    margin-top: myrem(-25);
     width: myrem(482);
   }
 }
@@ -53,7 +54,7 @@
   transform: translateX(-50%);
   background-color: rgba(51, 51, 51, 0.5);
   @include mq(md) {
-    padding: myrem(168) myrem(50) 0;
+    padding: myrem(165) myrem(50) 0;
     max-width: myrem(550);
     height: 100%;
     top: 0;
@@ -72,9 +73,9 @@
 }
 
 .p-information__item:not(:first-child) {
-  margin-top: myrem(16);
+  margin-top: myrem(17);
   @include mq(md) {
-    margin-top: myrem(13);
+    margin-top: myrem(9);
   }
 }
 
@@ -91,25 +92,35 @@
 
 .p-information__item-title {
   @include mq(md) {
+    padding: 0 0 0 myrem(22);
     width: 31%;
+    text-align: start;
   }
 }
 
 .p-information__item-text {
   padding: myrem(4) 0;
   @include mq(md) {
+    padding: 0 0 myrem(10) 0;
     text-align: start;
+  }
+}
+
+.p-information__item:first-child .p-information__item-text {
+  padding: myrem(4) myrem(45);
+  text-align: start;
+  @include mq(md) {
+    padding: 0 0 myrem(14) 0;
   }
 }
 
 .p-information__access {
   margin: myrem(340) auto 0;
-  padding: 0 myrem(15);
   max-width: myrem(345);
   width: 100%;
   position: relative;
   @include mq(md) {
-    margin-top: myrem(70);
+    margin-top: myrem(73);
     padding: 0;
     max-width: myrem(1000);
   }

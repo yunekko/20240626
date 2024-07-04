@@ -86,15 +86,15 @@
 
 .p-reason__sub-title {
   position: absolute;
-  top: myrem(29);
-  left: myrem(56);
+  top: myrem(27);
+  left: myrem(49);
   font-size: myrem(11);
   font-weight: 900;
   letter-spacing: myrem(0.6);
   color: $pink1;
   @include mq(md) {
     top: myrem(50);
-    left: myrem(170);
+    left: myrem(157);
     font-size: myrem(20);
     letter-spacing: myrem(-0.2);
   }
@@ -116,20 +116,20 @@
 }
 
 .p-reason__sub-title::before {
-  top: myrem(21);
-  left: myrem(30);
+  top: myrem(23);
+  left: myrem(36);
   @include mq(md) {
-    top: myrem(32);
-    left: myrem(25);
+    top: myrem(34);
+    left: myrem(38);
   }
 }
 
 .p-reason__sub-title::after {
-  top: myrem(21);
-  left: myrem(190);
+  top: myrem(23);
+  left: myrem(196);
   @include mq(md) {
-    top: myrem(32);
-    left: myrem(308);
+    top: myrem(34);
+    left: myrem(321);
   }
 }
 
@@ -140,6 +140,7 @@
   font-size: myrem(33);
   font-weight: 400;
   font-family: $font-sub;
+  font-style: italic;
   text-align: center;
   color: $gold1;
   @include mq(md) {
@@ -149,9 +150,12 @@
 }
 
 .p-reason__title span {
-  margin-left: myrem(-6);
+  position: relative;
+  top: myrem(-4);
+  left: myrem(-4);
   font-size: myrem(15);
   font-weight: bold;
+  font-style: normal;
   @include mq(md) {
     font-size: myrem(32);
   }
@@ -162,7 +166,7 @@
   width: myrem(93);
   height: myrem(1);
   position: absolute;
-  top: myrem(42);
+  top: myrem(41);
   left: 50%;
   transform: translateX(-50%);
   background-color: $gold1;
@@ -176,19 +180,21 @@
   counter-reset: number 0; /* number のカウンタを 0 にセット */
   margin: 0 auto;
   padding-top: myrem(43);
+  padding-bottom: myrem(44);
   max-width: myrem(345);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   row-gap: myrem(44);
+  row-gap: myrem(39);
   background-color: $white;
   border: 2px solid $pink1;
   @include mq(md) {
-    padding: myrem(63) myrem(30) 0;
+    padding: myrem(63) myrem(30) myrem(48);
     max-width: myrem(1000);
     grid-template-columns: repeat(2, 1fr);
     column-gap: myrem(20);
-    row-gap: myrem(56);
+    row-gap: myrem(53);
     border: 4.25px solid $pink1;
   }
 }
@@ -245,7 +251,7 @@
   z-index: 10;
   font-size: myrem(16.14);
   font-weight: 400;
-  font-family: $font-cinzel;
+  font-family: $font-sub;
   line-height: 1.3;
   text-transform: uppercase;
   background: linear-gradient(
@@ -255,7 +261,6 @@
     transparent 0
   );
   @include mq(md) {
-    padding: 0 myrem(29) 0 myrem(9);
     top: myrem(-81);
     left: myrem(19);
     font-size: myrem(21);
@@ -269,9 +274,9 @@
 }
 
 .p-reason__card:nth-child(even) .p-reason__card-number {
-  left: myrem(165);
+  left: myrem(155);
   @include mq(md) {
-    left: myrem(12);
+    left: myrem(18);
   }
 }
 
@@ -308,7 +313,7 @@
 .p-reason__card-number span {
   position: relative;
   top: myrem(4);
-  left: myrem(-10);
+  left: myrem(-19);
   z-index: -1;
   font-size: myrem(39.81);
   font-family: $font-sub;
@@ -316,8 +321,21 @@
   color: $gold1;
   @include mq(md) {
     top: myrem(9);
-    left: myrem(7);
+    left: myrem(-2);
     font-size: myrem(59);
+  }
+}
+
+.p-reason__card:nth-child(even) .p-reason__card-number span {
+  left: myrem(1);
+  @include mq(md) {
+    left: unset;
+  }
+}
+
+.p-reason__card:nth-child(3) .p-reason__card-number span {
+  @include mq(md) {
+    left: myrem(-3);
   }
 }
 
@@ -335,9 +353,27 @@
 .p-reason__card-inner1 {
   @include mq(md) {
     margin-top: myrem(-74);
-    padding: 0 myrem(18) myrem(18) myrem(17);
+    padding: 0 myrem(19) myrem(18) myrem(15);
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.p-reason__card:nth-child(3) .p-reason__card-inner1 {
+  @include mq(md) {
+    padding: 0 myrem(18) myrem(19) myrem(12);
+  }
+}
+
+.p-reason__card:nth-child(5) .p-reason__card-inner1 {
+  @include mq(md) {
+    padding: myrem(5) myrem(18) myrem(18) myrem(13);
+  }
+}
+
+.p-reason__card:nth-child(6) .p-reason__card-inner1 {
+  @include mq(md) {
+    padding: myrem(6) myrem(17) myrem(17) myrem(15);
   }
 }
 
@@ -348,6 +384,41 @@
     margin-top: 0;
     padding: 0;
     width: 56%;
+  }
+}
+
+.p-reason__card:nth-child(2) .p-reason__card-inner2 {
+  padding: 0 myrem(14) myrem(18) myrem(8);
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-reason__card:nth-child(3) .p-reason__card-inner2 {
+  padding: myrem(2) 0 myrem(18) myrem(8);
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-reason__card:nth-child(4) .p-reason__card-inner2 {
+  padding: myrem(1) myrem(7) myrem(20);
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-reason__card:nth-child(5) .p-reason__card-inner2 {
+  padding: myrem(3) 0 myrem(10) myrem(8);
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-reason__card:nth-child(6) .p-reason__card-inner2 {
+  padding: myrem(4) myrem(8) myrem(10) myrem(9);
+  @include mq(md) {
+    padding: 0;
   }
 }
 

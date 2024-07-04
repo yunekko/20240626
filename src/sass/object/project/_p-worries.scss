@@ -15,10 +15,14 @@
   background: linear-gradient(to bottom, #fcf1f1, #fff);
 }
 
+.p-worries__wrapper {
+  padding: 0 myrem(15);
+}
+
 .p-worries__list {
   margin: 0 auto;
   padding: myrem(26) myrem(14) myrem(31) myrem(15);
-  max-width: myrem(345);
+  max-width: myrem(550);
   width: 100%;
   position: relative;
   background-color: $black-main;
@@ -89,10 +93,46 @@
 }
 
 .p-worries__top-title span {
+  padding: 0 myrem(10) 0 myrem(6);
+  position: relative;
   font-size: myrem(24);
   font-weight: 500;
   @include mq(md) {
     font-size: myrem(28);
+  }
+}
+
+.p-worries__top-title span::before,
+.p-worries__top-title span::after {
+  content: "";
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.p-worries__top-title span::before {
+  width: myrem(10);
+  height: myrem(10);
+  top: 0;
+  left: 0;
+  background-image: url(../images/quotation__left.png);
+  @include mq(md) {
+    width: myrem(10);
+    height: myrem(10);
+    top: myrem(4);
+    left: myrem(-5);
+  }
+}
+
+.p-worries__top-title span::after {
+  width: myrem(15);
+  height: myrem(15);
+  top: 0;
+  right: myrem(4);
+  background-image: url(../images/quotation__right.png);
+  @include mq(md) {
+    top: myrem(3);
+    right: myrem(6);
   }
 }
 
@@ -108,16 +148,16 @@
   }
 }
 
-.p-worries__item:nth-of-type(2),
-.p-worries__item:nth-of-type(3) {
+.p-worries__item:nth-of-type(3),
+.p-worries__item:nth-of-type(4) {
   margin-top: myrem(11);
   @include mq(md) {
     margin-top: myrem(8);
   }
 }
 
-.p-worries__item:nth-of-type(4),
-.p-worries__item:nth-of-type(5) {
+.p-worries__item:nth-of-type(5),
+.p-worries__item:nth-of-type(6) {
   margin-top: myrem(17);
   @include mq(md) {
     margin-top: myrem(7);
@@ -159,5 +199,22 @@
 }
 
 .p-worries__item span {
+  position: relative;
+  display: inline-block;
+}
+
+.p-worries__item span::after {
+  content: "";
+  width: 0%;
+  height: myrem(25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   background: linear-gradient(transparent 60%, $pink2 30%);
+  transition: 1.8s;
+}
+
+.p-worries__item span.is-active::after {
+  width: 100%;
 }

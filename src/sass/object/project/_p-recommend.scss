@@ -198,6 +198,8 @@
     1px -1px 1px $white, 1px 0 1px $white, -1px 0 1px $white, 0 1px 1px $white,
     0 -1px 1px $white;
   @include mq(md) {
+    top: myrem(-14);
+    left: myrem(12);
     font-size: myrem(27);
   }
 }
@@ -205,7 +207,7 @@
 .p-recommend__text1-2 span {
   @include mq(md) {
     top: myrem(-19);
-    left: myrem(12) s;
+    left: myrem(12);
     font-size: myrem(34);
   }
 }
@@ -221,7 +223,7 @@
     0 -2px 2px $white;
   @include mq(md) {
     top: myrem(32);
-    left: myrem(63);
+    left: myrem(68);
     font-size: myrem(78);
   }
 }
@@ -288,7 +290,7 @@
   color: $white;
   @include mq(md) {
     top: myrem(29);
-    left: myrem(43);
+    left: myrem(47);
     font-size: myrem(27);
   }
 }
@@ -305,6 +307,7 @@
 .p-recommend__text-bottom {
   margin-top: myrem(6);
   padding-right: myrem(13);
+  max-width: myrem(600);
   font-size: myrem(13);
   font-weight: 500;
   font-family: $font-noto;

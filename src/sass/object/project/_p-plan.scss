@@ -20,17 +20,23 @@
 }
 
 .p-plan__cards {
-  margin: 500px auto;
+  margin: myrem(64) auto 0;
   max-width: myrem(345);
   width: 100%;
-
   display: flex;
   flex-direction: column;
   row-gap: myrem(77);
-
   @include mq(md) {
+    margin: myrem(119) auto 0;
     max-width: myrem(900);
     row-gap: myrem(102);
+  }
+}
+
+.p-plan__cards-bottom {
+  @include mq(md) {
+    margin-top: myrem(91);
+    row-gap: myrem(90);
   }
 }
 
@@ -71,8 +77,8 @@
 .p-plan__card-title::before,
 .p-plan__card-title::after {
   content: "";
-  width: 0px;
-  height: 0px;
+  width: 0;
+  height: 0;
   position: absolute;
   top: 0;
   border-color: $pink1 transparent;
@@ -133,7 +139,7 @@
   transform: rotate(66deg);
   @include mq(md) {
     top: myrem(17);
-    left: myrem(347);
+    left: myrem(342);
   }
 }
 
@@ -143,14 +149,14 @@
   transform: rotate(112deg);
   @include mq(md) {
     top: myrem(17);
-    left: myrem(528);
+    left: myrem(530);
   }
 }
 
 .p-plan__card-sub-title2::before {
   left: myrem(54);
   @include mq(md) {
-    left: myrem(293);
+    left: myrem(283);
   }
 }
 
@@ -391,6 +397,9 @@
 }
 
 .p-plan__text {
+  margin: 0 auto;
+  padding: myrem(16) 0 myrem(37);
+  max-width: myrem(345);
   font-size: myrem(13);
   font-weight: 500;
   font-family: $font-noto;
@@ -398,6 +407,22 @@
   line-height: 1.6;
   color: $black;
   @include mq(md) {
-    padding-left: myrem(95);
+    padding-bottom: myrem(52);
+    padding-left: myrem(110);
+    max-width: myrem(920);
+  }
+}
+
+.p-plan__text-bottom {
+  @include mq(md) {
+    padding-left: myrem(10);
+  }
+}
+
+.p-plan__button {
+  margin: 0 auto;
+  width: myrem(270);
+  @include mq(md) {
+    width: myrem(498);
   }
 }
