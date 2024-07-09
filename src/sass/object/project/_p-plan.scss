@@ -1,33 +1,55 @@
 @use "global" as *;
 
+.p-plan__inner {
+  padding: 0 myrem(15);
+}
+
 .p-plan__title {
   margin: 0 auto;
   padding: myrem(3) 0;
   width: myrem(264);
+  position: relative;
   font-size: myrem(20);
   font-weight: 900;
   text-align: center;
   color: $pink1;
-  border-top: 1.5px solid $pink1;
-  border-bottom: 1.5px solid $pink1;
   @include mq(md) {
     padding: myrem(7) 0 myrem(9);
     width: myrem(528);
     font-size: myrem(38);
-    border-top: 3.17px solid $pink1;
-    border-bottom: 3.17px solid $pink1;
   }
+}
+
+.p-plan__title::before,
+.p-plan__title::after {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  position: absolute;
+  left: 0;
+  background-color: $pink1;
+  border-radius: myrem(10);
+  @include mq(md) {
+    height: 3.17px;
+  }
+}
+
+.p-plan__title::before {
+  top: 0;
+}
+
+.p-plan__title::after {
+  top: 104%;
 }
 
 .p-plan__cards {
   margin: myrem(64) auto 0;
-  max-width: myrem(345);
   width: 100%;
   display: flex;
   flex-direction: column;
   row-gap: myrem(77);
   @include mq(md) {
-    margin: myrem(119) auto 0;
+    margin: myrem(127) auto 0;
     max-width: myrem(900);
     row-gap: myrem(102);
   }
@@ -35,12 +57,13 @@
 
 .p-plan__cards-bottom {
   @include mq(md) {
-    margin-top: myrem(91);
+    margin-top: myrem(97);
     row-gap: myrem(90);
   }
 }
 
 .p-plan__card {
+  background-color: $white;
   border: 3px solid $pink1;
   border-radius: myrem(15);
 }
@@ -53,7 +76,7 @@
   padding: myrem(3) myrem(60);
   position: relative;
   top: myrem(-18);
-  left: myrem(25);
+  left: 50%;
   display: inline-block;
   color: $white;
   background-color: $pink1;
@@ -61,12 +84,14 @@
   font-weight: 900;
   letter-spacing: myrem(1);
   text-align: center;
+  transform: translateX(-50%);
   @include mq(md) {
     padding: myrem(3) myrem(50);
     top: myrem(-34);
     left: myrem(210);
     font-size: myrem(40);
     letter-spacing: myrem(2);
+    transform: unset;
   }
 }
 
@@ -109,12 +134,14 @@
 }
 
 .p-plan__card-sub-title {
-  width: 100%;
+  width: fit-content;
   font-size: myrem(16);
   font-weight: 900;
   position: relative;
   top: myrem(-79);
+  left: 50%;
   text-align: center;
+  transform: translateX(-50%);
   @include mq(md) {
     top: myrem(-138);
     font-size: myrem(22);
@@ -135,35 +162,35 @@
 
 .p-plan__card-sub-title::before {
   top: myrem(13);
-  left: myrem(96);
+  left: myrem(-20);
   transform: rotate(66deg);
   @include mq(md) {
     top: myrem(17);
-    left: myrem(342);
+    left: myrem(-24);
   }
 }
 
 .p-plan__card-sub-title::after {
   top: myrem(13);
-  left: myrem(228);
+  left: myrem(130);
   transform: rotate(112deg);
   @include mq(md) {
     top: myrem(17);
-    left: myrem(530);
+    left: myrem(181);
   }
 }
 
 .p-plan__card-sub-title2::before {
-  left: myrem(54);
+  left: myrem(-20);
   @include mq(md) {
-    left: myrem(283);
+    left: myrem(-23);
   }
 }
 
 .p-plan__card-sub-title2::after {
-  left: myrem(268);
+  left: myrem(205);
   @include mq(md) {
-    left: myrem(583);
+    left: myrem(285);
   }
 }
 
@@ -381,7 +408,7 @@
   content: "(税別)";
   position: absolute;
   top: myrem(13);
-  right: 0;
+  left: myrem(203);
   font-size: myrem(12);
   font-weight: 900;
   @include mq(md) {
@@ -399,7 +426,6 @@
 .p-plan__text {
   margin: 0 auto;
   padding: myrem(16) 0 myrem(37);
-  max-width: myrem(345);
   font-size: myrem(13);
   font-weight: 500;
   font-family: $font-noto;
@@ -407,7 +433,7 @@
   line-height: 1.6;
   color: $black;
   @include mq(md) {
-    padding-bottom: myrem(52);
+    padding-bottom: myrem(49);
     padding-left: myrem(110);
     max-width: myrem(920);
   }

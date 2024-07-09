@@ -166,19 +166,19 @@
 
 .p-worries__item:before {
   content: "";
-  width: myrem(8);
-  height: myrem(17);
+  width: myrem(16);
+  height: myrem(16);
   position: absolute;
-  top: myrem(2);
-  left: myrem(-20);
-  -webkit-transform: rotate(50deg);
-  -ms-transform: rotate(50deg);
-  transform: rotate(50deg);
-  border-right: 2px solid $pink1;
-  border-bottom: 2px solid $pink1;
+  top: myrem(6);
+  left: myrem(-24);
+  background-image: url(../images/worries__check.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   @include mq(md) {
-    width: myrem(7);
+    width: myrem(20);
     height: myrem(20);
+    top: myrem(3);
+    left: myrem(-27);
   }
 }
 
@@ -199,22 +199,13 @@
 }
 
 .p-worries__item span {
-  position: relative;
-  display: inline-block;
-}
-
-.p-worries__item span::after {
-  content: "";
-  width: 0%;
-  height: myrem(25);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  display: inline;
   background: linear-gradient(transparent 60%, $pink2 30%);
-  transition: 1.8s;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 1.8s;
 }
 
-.p-worries__item span.is-active::after {
-  width: 100%;
+.p-worries__item span.is-active {
+  background-size: 100% 100%;
 }

@@ -2,16 +2,16 @@
 
 .l-plan {
   padding-top: myrem(60);
-  padding-bottom: myrem(68);
+  padding-bottom: myrem(61);
   @include mq(md) {
     padding-top: myrem(102);
-    padding-bottom: myrem(130);
+    padding-bottom: myrem(121);
   }
 }
 
 .l-plan-bottom {
-  padding-bottom: myrem(103);
+  padding-bottom: myrem(94);
   @include mq(md) {
-    padding-bottom: myrem(202);
+    padding-bottom: myrem(192);
   }
 }

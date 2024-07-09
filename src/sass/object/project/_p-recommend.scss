@@ -1,5 +1,17 @@
 @use "global" as *;
 
+.p-recommend {
+  overflow: hidden;
+}
+
+.p-recommend__container {
+  @include mq(md) {
+    margin: 0 auto;
+    max-width: myrem(1400);
+    width: 100%;
+  }
+}
+
 .p-recommend__catch {
   margin: 0 auto;
   width: fit-content;
@@ -20,28 +32,70 @@
   width: 0;
   height: myrem(52);
   position: absolute;
-  border-left: 7px double $pink1;
+  border-left: 2px solid $pink1;
+  border-radius: myrem(10);
   @include mq(md) {
-    height: myrem(64);
-    border-left: 13px double $pink1;
+    height: myrem(62);
+    border-left: 3px solid $pink1;
   }
 }
 
 .p-recommend__catch::before {
-  top: myrem(7);
-  left: myrem(-25);
+  top: myrem(5);
+  left: myrem(-19);
   transform: skew(28deg);
   @include mq(md) {
-    left: myrem(-41);
+    top: myrem(10);
+    left: myrem(-40);
   }
 }
 
 .p-recommend__catch::after {
-  top: myrem(6);
+  top: myrem(3);
   right: myrem(-24);
   transform: skew(-28deg);
   @include mq(md) {
+    top: myrem(6);
     right: myrem(-41);
+  }
+}
+
+.p-recommend__catch span {
+  position: relative;
+}
+
+.p-recommend__catch span::before,
+.p-recommend__catch span::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: myrem(52);
+  position: absolute;
+  border-left: 2px solid $pink1;
+  border-radius: myrem(10);
+  @include mq(md) {
+    height: myrem(62);
+    border-left: 3px solid $pink1;
+  }
+}
+
+.p-recommend__catch span::before {
+  top: myrem(6);
+  left: myrem(-64);
+  transform: skew(28deg);
+  @include mq(md) {
+    top: myrem(11);
+    left: myrem(-85);
+  }
+}
+
+.p-recommend__catch span::after {
+  top: myrem(4);
+  right: myrem(-19);
+  transform: skew(-28deg);
+  @include mq(md) {
+    top: myrem(9);
+    right: myrem(-31);
   }
 }
 
@@ -63,16 +117,21 @@
   }
 }
 
-.p-recommend__container {
+.p-recommend__inner1 {
   @include mq(md) {
-    margin: 0 auto;
-    padding: 0 myrem(250) myrem(141);
-    max-width: myrem(1400);
-    width: 100%;
-    background-image: url(../images/recommend__bg.jpg);
-    background-size: 145%;
-    background-repeat: no-repeat;
-    background-position: myrem(-223) myrem(-15);
+    position: relative;
+  }
+}
+
+.p-recommend__image {
+  display: none;
+  @include mq(md) {
+    width: 145%;
+    display: block;
+    position: absolute;
+    top: myrem(-194);
+    left: -16%;
+    z-index: -1;
   }
 }
 
@@ -81,6 +140,14 @@
   @include mq(md) {
     margin-top: myrem(22);
     padding-left: myrem(7);
+  }
+}
+
+.p-recommend__inner2 {
+  @include mq(md) {
+    width: 100%;
+    position: absolute;
+    left: 18%;
   }
 }
 
@@ -110,17 +177,30 @@
 }
 
 .p-recommend__title2 span {
+  position: relative;
   font-size: myrem(36);
   font-weight: 900;
   color: $gold1;
-  border-bottom: 1.17px solid $gold1;
   @include mq(md) {
     font-size: myrem(60);
-    border-bottom: 2.97px solid $gold1;
   }
 }
 
-.p-recommend__inner {
+.p-recommend__title2 span::before {
+  content: "";
+  width: 100%;
+  height: 1.17px;
+  background-color: $gold1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: myrem(5);
+  @include mq(md) {
+    height: 2.97px;
+  }
+}
+
+.p-recommend__inner3 {
   margin-top: myrem(13);
   display: flex;
   flex-direction: column;
@@ -132,17 +212,27 @@
   }
 }
 
-.p-recommend__graph {
+.p-recommend__inner3-1 {
   margin: 0 auto;
-  width: myrem(191);
-  height: myrem(191);
+  width: 51%;
+  @include mq(md) {
+    margin: 0;
+    width: inherit;
+  }
+}
+
+.p-recommend__graph {
+  padding-bottom: 100%;
+  width: 100%;
   position: relative;
   border-radius: 50%;
   background-image: conic-gradient($pink1 0deg 327deg, $pink7 327deg 360deg);
+  box-shadow: 2px 2px 2px 0 rgb(0, 0, 0, 0.2);
   @include mq(md) {
     margin: myrem(30) 0 0;
     width: myrem(243);
     height: myrem(243);
+    box-shadow: 3.8998px 3.8998px 3.8998px 0 rgb(0, 0, 0, 0.25);
   }
 }
 
@@ -155,13 +245,21 @@
   }
 }
 
+.p-recommend__texts {
+  width: 100%;
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .p-recommend__text1 {
   padding-right: myrem(15);
   padding-left: myrem(16);
   width: fit-content;
   position: relative;
   top: myrem(38);
-  left: myrem(29);
+  left: 15%;
   font-size: myrem(10);
   font-weight: 900;
   background-color: $white;
@@ -190,16 +288,17 @@
 
 .p-recommend__text1 span {
   position: absolute;
-  top: myrem(-12);
-  left: myrem(8);
+  top: myrem(-14);
+  left: myrem(5);
   font-size: myrem(21.51);
   font-weight: 900;
+  font-style: italic;
   text-shadow: 1px 1px 1px $white, -1px -1px 1px $white, -1px 1px 1px $white,
     1px -1px 1px $white, 1px 0 1px $white, -1px 0 1px $white, 0 1px 1px $white,
     0 -1px 1px $white;
   @include mq(md) {
     top: myrem(-14);
-    left: myrem(12);
+    left: myrem(10);
     font-size: myrem(27);
   }
 }
@@ -215,16 +314,20 @@
 .p-recommend__text2 {
   position: relative;
   top: myrem(27);
-  left: myrem(50);
+  left: 50%;
+  transform: translateX(-50%);
   font-size: myrem(61);
   font-weight: 900;
   text-shadow: 2px 2px 2px $white, -2px -2px 2px $white, -2px 2px 2px $white,
     2px -2px 2px $white, 2px 0 2px $white, -2px 0 2px $white, 0 2px 2px $white,
     0 -2px 2px $white;
+  text-align: center;
   @include mq(md) {
     top: myrem(32);
     left: myrem(68);
+    transform: unset;
     font-size: myrem(78);
+    text-align: start;
   }
 }
 
@@ -234,11 +337,15 @@
 
 .p-recommend__text2-2 {
   top: myrem(30);
-  left: myrem(47);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   @include mq(md) {
     top: myrem(37);
     left: myrem(66);
+    transform: unset;
     font-size: myrem(88);
+    text-align: start;
   }
 }
 
@@ -260,7 +367,7 @@
   content: "の方が";
   position: absolute;
   top: myrem(74);
-  left: myrem(71);
+  left: 63%;
   font-size: myrem(12);
   font-weight: 900;
   color: $white;
@@ -274,7 +381,7 @@
 
 .p-recommend__text2-2::after {
   top: myrem(77);
-  left: myrem(74);
+  left: 64%;
   @include mq(md) {
     top: myrem(112);
     left: myrem(109);
@@ -284,24 +391,32 @@
 .p-recommend__text3 {
   position: relative;
   top: myrem(24);
-  left: myrem(34);
+  left: 50%;
+  transform: translateX(-50%);
   font-size: myrem(21);
   font-weight: 900;
+  text-align: center;
   color: $white;
   @include mq(md) {
     top: myrem(29);
     left: myrem(47);
+    transform: none;
     font-size: myrem(27);
+    text-align: start;
   }
 }
 
 .p-recommend__text3-2 {
   top: myrem(29);
-  left: myrem(36);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   @include mq(md) {
     top: myrem(36);
     left: myrem(55);
+    transform: unset;
     font-size: myrem(29);
+    text-align: start;
   }
 }
 .p-recommend__text-bottom {

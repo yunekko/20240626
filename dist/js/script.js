@@ -60,7 +60,7 @@ jQuery(function ($) {
 });
 
 // フローティングメニュー
-var float = $(".p-float");
+var float = $(".p-float:not(.p-float-drawer)");
 var informationOffset = $(".p-information").offset().top;
 float.hide();
 if (window.matchMedia("(max-width: 768px)").matches) {
@@ -131,4 +131,11 @@ $(function () {
     // クリックしたタイトルの次の要素(コンテンツ)を開閉
     $(this).next().slideToggle(300);
   });
+});
+
+// スクロールヒント
+new ScrollHint(".js-scrollable", {
+  i18n: {
+    scrollable: "スクロールできます",
+  },
 });

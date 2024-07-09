@@ -46,8 +46,7 @@
 
 .p-information__inner {
   padding: myrem(21) myrem(15) myrem(27);
-  max-width: myrem(345);
-  width: 100%;
+  width: 93%;
   position: absolute;
   top: 69%;
   left: 50%;
@@ -108,15 +107,21 @@
 
 .p-information__item:first-child .p-information__item-text {
   padding: myrem(4) myrem(45);
-  text-align: start;
   @include mq(md) {
     padding: 0 0 myrem(14) 0;
   }
 }
 
+.p-information__item-text a {
+  @include mq(md) {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+}
+
 .p-information__access {
   margin: myrem(340) auto 0;
-  max-width: myrem(345);
   width: 100%;
   position: relative;
   @include mq(md) {
@@ -127,12 +132,14 @@
 }
 
 .p-information__access-title {
+  padding: 0 myrem(15);
   position: relative;
   font-size: myrem(20);
   font-weight: 400;
   text-transform: uppercase;
   color: $white;
   @include mq(md) {
+    padding: 0;
     font-size: myrem(38);
   }
 }
@@ -143,7 +150,7 @@
   height: myrem(2);
   position: absolute;
   top: 50%;
-  left: myrem(86);
+  left: myrem(98);
   background-color: $white;
   @include mq(md) {
     width: myrem(20);
@@ -152,6 +159,7 @@
 }
 
 .p-information__access iframe {
+  padding: 0 myrem(15);
   width: 100%;
   height: myrem(200);
   position: absolute;
@@ -159,6 +167,7 @@
   left: 50%;
   transform: translateX(-50%);
   @include mq(md) {
+    padding: 0;
     height: myrem(450);
     top: myrem(82);
   }

@@ -7,8 +7,7 @@
 .p-footer__container {
   margin: 0 auto;
   padding: myrem(15) 0 myrem(54);
-  max-width: myrem(345);
-  width: 100%;
+  width: 92%;
   border-top: 1px solid $white;
   @include mq(md) {
     padding: myrem(20) 0 myrem(35);

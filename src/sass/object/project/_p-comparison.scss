@@ -1,22 +1,49 @@
 @use "global" as *;
 
 .p-comparison {
+  position: relative;
+}
+
+.p-comparison::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: $green2;
+  opacity: 0.9;
+}
+
+.p-comparison::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
   background: repeating-linear-gradient(
     90deg,
     #fff,
-    #fff 3px,
-    #d8f5f5 3px,
-    #d8f5f5 6px
+    #fff 5px,
+    #aaaaaa 5px,
+    #aaaaaa 10px
   );
   @include mq(md) {
     background: repeating-linear-gradient(
       90deg,
       #fff,
       #fff 6px,
-      #d8f5f5 6px,
-      #d8f5f5 14px
+      #aaaaaa 6px,
+      #aaaaaa 14px
     );
   }
+}
+
+.p-comparison__inner {
+  padding: 0 myrem(15);
 }
 
 .p-comparison__title {
@@ -74,8 +101,7 @@
 
 .p-comparison__cards {
   margin: 0 auto;
-  padding-top: myrem(28);
-  max-width: myrem(345);
+  padding-top: myrem(29);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -90,7 +116,7 @@
 }
 
 .p-comparison__card {
-  padding: myrem(10) myrem(15) myrem(25);
+  padding: myrem(10) myrem(15) myrem(21);
   background-color: $white;
   @include mq(md) {
     padding: myrem(11) myrem(36) myrem(10) myrem(33);
@@ -121,13 +147,14 @@
 }
 
 .p-comparison__card-image {
-  width: myrem(315);
+  width: 100%;
   @include mq(md) {
     width: myrem(410);
   }
 }
 
 .p-comparison__card-image img {
+  width: 100%;
   aspect-ratio: 310/145;
   @include mq(md) {
     aspect-ratio: 410/190;
@@ -135,16 +162,16 @@
 }
 
 .p-comparison__card-texts {
-  margin-top: myrem(-3);
-  padding-right: myrem(15);
   display: flex;
   justify-content: space-between;
   @include mq(md) {
     margin-top: myrem(-6);
+    padding-top: myrem(7);
   }
 }
 
 .p-comparison__card-text {
+  width: 32%;
   font-size: myrem(10);
   font-family: $font-noto;
   color: $black;
@@ -152,6 +179,13 @@
   @include mq(md) {
     font-size: myrem(13);
     line-height: 1.4;
+  }
+}
+
+.p-comparison__card-text:not(:first-child) {
+  padding-left: myrem(7);
+  @include mq(md) {
+    padding-left: 0;
   }
 }
 
@@ -164,9 +198,8 @@
   overflow-x: auto;
   @include mq(md) {
     margin: 0 auto;
-    padding-top: myrem(78);
+    padding-top: myrem(69);
     max-width: myrem(1000);
-    overflow-x: unset;
   }
 }
 
@@ -190,8 +223,6 @@
   border-collapse: collapse;
   table-layout: fixed;
   text-align: center;
-  @include mq(md) {
-  }
 }
 
 .p-comparison__table-row {
@@ -207,49 +238,8 @@
   font-weight: 900;
   color: $white;
   text-align: center;
-  background-color: $gray2;
-  border: 3px solid $gray3;
   @include mq(md) {
     font-size: myrem(18);
-  }
-}
-
-.p-comparison__table-title--pink {
-  padding-top: myrem(7);
-  padding-bottom: myrem(5);
-  position: relative;
-  background-color: $pink1;
-  border-top: none;
-  border-right: 3.15px solid $pink1;
-  border-left: 3.15px solid $pink1;
-  @include mq(md) {
-    padding-top: myrem(12);
-    font-size: myrem(20);
-  }
-}
-
-.p-comparison__table-title--pink::after {
-  content: "";
-  width: 103%;
-  height: myrem(472);
-  border: 3.15px solid $pink1;
-  position: absolute;
-  top: myrem(53);
-  left: myrem(-3);
-  @include mq(md) {
-    width: 102%;
-    border: 5px solid $pink1;
-    top: myrem(77);
-    height: myrem(754);
-  }
-}
-
-.p-comparison__table-title--green {
-  background-color: $green1;
-  border-top: none;
-  border-right: 1px solid $white;
-  @include mq(md) {
-    font-size: myrem(20);
   }
 }
 
@@ -266,6 +256,68 @@
   color: $white;
   @include mq(md) {
     top: myrem(48);
+  }
+}
+
+.p-comparison__table-title-sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-left: none;
+  border-right: none;
+  background: none;
+}
+
+.p-comparison__table-title-sticky::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $gray2;
+  border: 3px solid $gray3;
+  z-index: -1;
+}
+
+.p-comparison__table-title--pink {
+  padding-top: myrem(7);
+  padding-bottom: myrem(5);
+  position: relative;
+  background-color: $pink1;
+  border-top: none;
+  border-right: 3.15px solid $pink1;
+  border-bottom: 3px solid $gray3;
+  border-left: 3.15px solid $pink1;
+  @include mq(md) {
+    padding-top: myrem(12);
+    font-size: myrem(20);
+  }
+}
+
+.p-comparison__table-title--pink::after {
+  content: "";
+  width: 103%;
+  height: myrem(470);
+  position: absolute;
+  top: myrem(53);
+  left: myrem(-3);
+  border: 3.15px solid $pink1;
+  @include mq(md) {
+    width: 102%;
+    height: myrem(754);
+    top: myrem(77);
+    border: 5px solid $pink1;
+  }
+}
+
+.p-comparison__table-title--green {
+  background-color: $green1;
+  border-top: none;
+  border-right: 1px solid $white;
+  border-bottom: 3px solid $gray3;
+  @include mq(md) {
+    font-size: myrem(20);
   }
 }
 

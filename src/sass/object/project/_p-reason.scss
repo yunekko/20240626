@@ -7,11 +7,12 @@
 }
 
 .p-reason__inner {
-  margin: 0 auto;
-  max-width: myrem(345);
+  padding: 0 myrem(15);
   width: 100%;
   position: relative;
   @include mq(md) {
+    margin: 0 auto;
+    padding: 0;
     max-width: myrem(1000);
   }
 }
@@ -20,7 +21,7 @@
   width: myrem(110);
   position: absolute;
   top: myrem(-25);
-  right: myrem(-11);
+  right: myrem(3);
   z-index: 50;
   @include mq(md) {
     width: myrem(186);
@@ -85,18 +86,22 @@
 }
 
 .p-reason__sub-title {
+  width: myrem(250);
   position: absolute;
   top: myrem(27);
-  left: myrem(49);
+  left: 50%;
   font-size: myrem(11);
   font-weight: 900;
   letter-spacing: myrem(0.6);
   color: $pink1;
+  transform: translateX(-50%);
   @include mq(md) {
+    width: unset;
     top: myrem(50);
     left: myrem(157);
     font-size: myrem(20);
     letter-spacing: myrem(-0.2);
+    transform: unset;
   }
 }
 
@@ -178,10 +183,8 @@
 
 .p-reason__cards {
   counter-reset: number 0; /* number のカウンタを 0 にセット */
-  margin: 0 auto;
   padding-top: myrem(43);
   padding-bottom: myrem(44);
-  max-width: myrem(345);
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -190,7 +193,7 @@
   background-color: $white;
   border: 2px solid $pink1;
   @include mq(md) {
-    padding: myrem(63) myrem(30) myrem(48);
+    padding: myrem(57) myrem(30) myrem(48);
     max-width: myrem(1000);
     grid-template-columns: repeat(2, 1fr);
     column-gap: myrem(20);
@@ -209,7 +212,7 @@
 
 .p-reason__card-image {
   margin: 0 auto;
-  width: myrem(250);
+  width: 80%;
   @include mq(md) {
     display: none;
   }
@@ -249,7 +252,7 @@
   top: myrem(-54);
   left: myrem(12);
   z-index: 10;
-  font-size: myrem(16.14);
+  font-size: myrem(12);
   font-weight: 400;
   font-family: $font-sub;
   line-height: 1.3;
@@ -263,7 +266,7 @@
   @include mq(md) {
     top: myrem(-81);
     left: myrem(19);
-    font-size: myrem(21);
+    font-size: myrem(19);
     background: linear-gradient(
       transparent 48%,
       $white 0,
@@ -274,7 +277,7 @@
 }
 
 .p-reason__card:nth-child(even) .p-reason__card-number {
-  left: myrem(155);
+  left: 58%;
   @include mq(md) {
     left: myrem(18);
   }
@@ -313,7 +316,7 @@
 .p-reason__card-number span {
   position: relative;
   top: myrem(4);
-  left: myrem(-19);
+  left: 0;
   z-index: -1;
   font-size: myrem(39.81);
   font-family: $font-sub;
@@ -321,7 +324,7 @@
   color: $gold1;
   @include mq(md) {
     top: myrem(9);
-    left: myrem(-2);
+    left: myrem(9);
     font-size: myrem(59);
   }
 }
@@ -329,7 +332,7 @@
 .p-reason__card:nth-child(even) .p-reason__card-number span {
   left: myrem(1);
   @include mq(md) {
-    left: unset;
+    left: myrem(10);
   }
 }
 

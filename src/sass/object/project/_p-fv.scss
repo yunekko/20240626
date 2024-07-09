@@ -1,24 +1,20 @@
 @use "global" as *;
 
+.p-fv {
+  height: 100vh;
+  overflow: hidden;
+}
+
 .p-fv__inner1 {
   width: 100%;
   position: relative;
-  background-image: url(../images/fv__bg-sp.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right myrem(48);
-  @include mq(md) {
-    background-image: url(../images/fv__bg-pc.png);
-    background-size: 130%;
-    background-position: 37% 28%;
-  }
 }
 
 .p-fv__inner1::after {
   @include mq(md) {
     content: "";
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -27,13 +23,24 @@
   }
 }
 
+.p-fv__bg-image {
+  position: absolute;
+  top: myrem(45);
+  @include mq(md) {
+    width: 128%;
+    top: myrem(-148);
+    left: myrem(-141);
+  }
+}
+
 .p-fv__inner2 {
   padding-top: 16%;
   @include mq(md) {
-    margin-left: 10%;
+    margin-left: 14%;
     padding-top: myrem(74);
-    max-width: myrem(520);
-    width: 100%;
+    min-width: myrem(440);
+    width: 38%;
+    height: 100%;
     background-color: $pink10;
     box-shadow: 0 0 8px rgba(1, 2, 0, 0.2);
   }
@@ -45,9 +52,9 @@
 
 .p-fv__text1 {
   margin-left: myrem(29);
+  padding: myrem(1) 0 myrem(2);
   max-width: myrem(151);
   width: 100%;
-  padding: myrem(1) 0 myrem(2);
   font-size: myrem(16);
   font-weight: 900;
   text-align: center;
@@ -73,7 +80,8 @@
   line-height: 1.2;
   text-align: center;
   @include mq(md) {
-    max-width: myrem(440);
+    margin-left: unset;
+    max-width: unset;
     font-size: myrem(22);
   }
 }
@@ -97,7 +105,7 @@
   line-height: 1.2;
   @include mq(md) {
     margin-top: myrem(15);
-    max-width: myrem(520);
+    max-width: unset;
     font-size: myrem(68);
   }
 }
@@ -116,7 +124,8 @@
   width: myrem(170);
   @include mq(md) {
     margin-top: myrem(10);
-    margin-left: myrem(54);
+    margin-right: auto;
+    margin-left: auto;
     width: myrem(410);
   }
 }
@@ -136,7 +145,8 @@
   justify-content: center;
   flex-direction: column;
   @include mq(md) {
-    max-width: myrem(485);
+    max-width: unset;
+    width: 94%;
     flex-direction: row;
     justify-self: unset;
     column-gap: myrem(64);
@@ -332,10 +342,10 @@
 }
 
 .p-fv__logo {
-  width: 100%;
+  width: 102%;
   position: absolute;
-  top: myrem(12);
-  left: 0;
+  top: myrem(10);
+  left: myrem(-5);
   @include mq(md) {
     width: myrem(95);
     top: myrem(24);

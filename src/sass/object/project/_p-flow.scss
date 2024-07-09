@@ -18,7 +18,15 @@
   background: $pink2;
 }
 
-.p-flow::after {
+.p-flow__inner {
+  padding: 0 myrem(15);
+  position: relative;
+  @include mq(md) {
+    padding: 0;
+  }
+}
+
+.p-flow__inner::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -31,6 +39,21 @@
   background: $pink2;
   @include mq(md) {
     bottom: myrem(-180);
+  }
+}
+
+.p-flow__inner::after {
+  content: "";
+  width: myrem(236);
+  height: myrem(42);
+  position: absolute;
+  bottom: -9%;
+  right: 0;
+  z-index: -10;
+  clip-path: polygon(0 37%, 100% 0%, 100% 100%);
+  background: linear-gradient(to right, $white, $pink1);
+  @include mq(md) {
+    content: none;
   }
 }
 
@@ -63,7 +86,6 @@
 
 .p-flow__wrapper {
   margin: 0 auto;
-  max-width: myrem(375);
   width: 100%;
   position: relative;
   @include mq(md) {
@@ -74,20 +96,19 @@
 .p-flow__wrapper-image {
   width: myrem(165);
   position: absolute;
-  top: myrem(-95);
-  left: myrem(-69);
+  top: myrem(-92);
+  left: myrem(-83);
   @include mq(md) {
     width: myrem(415);
-    top: myrem(-277);
-    left: myrem(-1);
+    top: -35%;
+    left: 0;
   }
 }
 
 .p-flow__list {
   counter-reset: number 0; /* number のカウンタを 0 にセット */
   margin: 0 auto;
-  padding: myrem(41) myrem(15) 0;
-  max-width: myrem(375);
+  padding-top: myrem(41);
   width: 100%;
   display: flex;
   flex-direction: column;

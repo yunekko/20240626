@@ -1,10 +1,9 @@
 @use "global" as *;
 
 .l-faq {
-  padding-top: myrem(113);
   padding-bottom: myrem(74);
   @include mq(md) {
-    padding-top: myrem(253);
+    padding-top: myrem(180);
     padding-bottom: myrem(140);
   }
 }
