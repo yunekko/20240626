@@ -7,7 +7,6 @@
 .p-recommend__container {
   @include mq(md) {
     margin: 0 auto;
-    max-width: myrem(1400);
     width: 100%;
   }
 }
@@ -30,32 +29,32 @@
 .p-recommend__catch::after {
   content: "";
   width: 0;
-  height: myrem(52);
+  height: myrem(57);
   position: absolute;
   border-left: 2px solid $pink1;
   border-radius: myrem(10);
   @include mq(md) {
-    height: myrem(62);
+    height: myrem(73);
     border-left: 3px solid $pink1;
   }
 }
 
 .p-recommend__catch::before {
-  top: myrem(5);
+  top: myrem(4);
   left: myrem(-19);
-  transform: skew(28deg);
+  transform: rotate(-28deg);
   @include mq(md) {
-    top: myrem(10);
+    top: myrem(2);
     left: myrem(-40);
   }
 }
 
 .p-recommend__catch::after {
-  top: myrem(3);
-  right: myrem(-24);
-  transform: skew(-28deg);
+  top: myrem(2);
+  right: myrem(-18);
+  transform: rotate(28deg);
   @include mq(md) {
-    top: myrem(6);
+    top: myrem(1);
     right: myrem(-41);
   }
 }
@@ -69,32 +68,32 @@
   position: absolute;
   content: "";
   width: 0;
-  height: myrem(52);
+  height: myrem(57);
   position: absolute;
   border-left: 2px solid $pink1;
   border-radius: myrem(10);
   @include mq(md) {
-    height: myrem(62);
+    height: myrem(73);
     border-left: 3px solid $pink1;
   }
 }
 
 .p-recommend__catch span::before {
-  top: myrem(6);
-  left: myrem(-64);
-  transform: skew(28deg);
+  top: myrem(3);
+  left: myrem(-65);
+  transform: rotate(-28deg);
   @include mq(md) {
-    top: myrem(11);
+    top: myrem(3);
     left: myrem(-85);
   }
 }
 
 .p-recommend__catch span::after {
-  top: myrem(4);
-  right: myrem(-19);
-  transform: skew(-28deg);
+  top: myrem(2);
+  right: myrem(-24);
+  transform: rotate(28deg);
   @include mq(md) {
-    top: myrem(9);
+    top: myrem(2);
     right: myrem(-31);
   }
 }
@@ -120,34 +119,44 @@
 .p-recommend__inner1 {
   @include mq(md) {
     position: relative;
+    display: flex;
   }
 }
 
 .p-recommend__image {
   display: none;
   @include mq(md) {
-    width: 145%;
+    margin-top: calc(-230 / 1440 * 100%);
     display: block;
-    position: absolute;
-    top: myrem(-194);
-    left: -16%;
+    position: relative;
+    top: myrem(15);
     z-index: -1;
+  }
+}
+
+.p-recommend__image img {
+  @include mq(md) {
+    aspect-ratio: 1400/828;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 .p-recommend__bottom {
   margin-top: myrem(20);
   @include mq(md) {
-    margin-top: myrem(22);
+    margin-top: myrem(13);
     padding-left: myrem(7);
   }
 }
 
 .p-recommend__inner2 {
   @include mq(md) {
+    margin-left: 18%;
+    padding-top: myrem(11);
     width: 100%;
     position: absolute;
-    left: 18%;
   }
 }
 
@@ -204,7 +213,7 @@
   margin-top: myrem(13);
   display: flex;
   flex-direction: column;
-  row-gap: myrem(16);
+  row-gap: myrem(14);
   @include mq(md) {
     margin-top: myrem(25);
     flex-direction: row;
@@ -253,7 +262,7 @@
   transform: translate(-50%, -50%);
 }
 
-.p-recommend__text1 {
+.p-recommend__text {
   padding-right: myrem(15);
   padding-left: myrem(16);
   width: fit-content;
@@ -262,6 +271,7 @@
   left: 15%;
   font-size: myrem(10);
   font-weight: 900;
+  font-style: italic;
   background-color: $white;
   @include mq(md) {
     padding-right: myrem(18);
@@ -272,7 +282,7 @@
   }
 }
 
-.p-recommend__text1-2 {
+.p-recommend__text-2 {
   padding-right: myrem(14);
   padding-left: myrem(23);
   top: myrem(40);
@@ -286,7 +296,7 @@
   }
 }
 
-.p-recommend__text1 span {
+.p-recommend__text span {
   position: absolute;
   top: myrem(-14);
   left: myrem(5);
@@ -303,7 +313,7 @@
   }
 }
 
-.p-recommend__text1-2 span {
+.p-recommend__text-2 span {
   @include mq(md) {
     top: myrem(-19);
     left: myrem(12);
@@ -311,7 +321,7 @@
   }
 }
 
-.p-recommend__text2 {
+.p-recommend__percent {
   position: relative;
   top: myrem(27);
   left: 50%;
@@ -331,11 +341,11 @@
   }
 }
 
-.p-recommend__text2--gold {
+.p-recommend__percent--gold {
   color: $gold1;
 }
 
-.p-recommend__text2-2 {
+.p-recommend__percent-2 {
   top: myrem(30);
   left: 50%;
   transform: translateX(-50%);
@@ -349,7 +359,7 @@
   }
 }
 
-.p-recommend__text2 span {
+.p-recommend__percent span {
   font-size: myrem(31);
   font-weight: 900;
   @include mq(md) {
@@ -357,13 +367,13 @@
   }
 }
 
-.p-recommend__text2-2 span {
+.p-recommend__percent-2 span {
   @include mq(md) {
     font-size: myrem(49);
   }
 }
 
-.p-recommend__text2::after {
+.p-recommend__percent::after {
   content: "の方が";
   position: absolute;
   top: myrem(74);
@@ -379,7 +389,7 @@
   }
 }
 
-.p-recommend__text2-2::after {
+.p-recommend__percent-2::after {
   top: myrem(77);
   left: 64%;
   @include mq(md) {
@@ -388,7 +398,7 @@
   }
 }
 
-.p-recommend__text3 {
+.p-recommend__comment {
   position: relative;
   top: myrem(24);
   left: 50%;
@@ -406,7 +416,7 @@
   }
 }
 
-.p-recommend__text3-2 {
+.p-recommend__comment-2 {
   top: myrem(29);
   left: 50%;
   transform: translateX(-50%);

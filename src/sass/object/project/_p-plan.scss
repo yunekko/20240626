@@ -63,17 +63,18 @@
 }
 
 .p-plan__card {
-  background-color: $white;
+  background-color: #fdf7f8;
   border: 3px solid $pink1;
   border-radius: myrem(15);
 }
 
 .p-plan__card--green {
+  background-color: #f8fdfd;
   border: 3px solid $green1;
 }
 
 .p-plan__card-title {
-  padding: myrem(3) myrem(60);
+  padding: myrem(7.5) myrem(60);
   position: relative;
   top: myrem(-18);
   left: 50%;
@@ -82,16 +83,15 @@
   background-color: $pink1;
   font-size: myrem(18);
   font-weight: 900;
+  line-height: 1;
   letter-spacing: myrem(1);
   text-align: center;
   transform: translateX(-50%);
   @include mq(md) {
-    padding: myrem(3) myrem(50);
+    padding: myrem(13) myrem(50);
     top: myrem(-34);
-    left: myrem(210);
     font-size: myrem(40);
     letter-spacing: myrem(2);
-    transform: unset;
   }
 }
 
@@ -196,7 +196,7 @@
 
 .p-plan__card-inner {
   margin-top: myrem(-10);
-  padding: 0 myrem(11) myrem(30);
+  padding: 0 myrem(11) myrem(34);
   display: flex;
   flex-direction: column;
   @include mq(md) {
@@ -233,15 +233,18 @@
 }
 
 .p-plan__card-part {
+  padding: myrem(3) 0;
   width: calc(74 / 315 * 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: myrem(14);
   font-weight: 900;
+  line-height: 1;
   background-color: $pink4;
   border-radius: myrem(11);
   @include mq(md) {
+    padding: myrem(5) 0;
     width: calc(100 / 420 * 100%);
     font-size: myrem(17);
     border-radius: myrem(14);
@@ -307,7 +310,7 @@
 }
 
 .p-plan__card-price-box {
-  width: calc(100% - myrem(60));
+  width: 78%;
   @include mq(md) {
     width: calc(100% - myrem(94));
   }
@@ -408,11 +411,11 @@
   content: "(税別)";
   position: absolute;
   top: myrem(13);
-  left: myrem(203);
+  left: myrem(195);
   font-size: myrem(12);
   font-weight: 900;
   @include mq(md) {
-    right: myrem(-1);
+    left: 86%;
     font-size: myrem(14);
   }
 }

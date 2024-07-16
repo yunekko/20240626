@@ -36,7 +36,8 @@
   padding-top: myrem(200);
   position: relative;
   background-image: url(../images/salon__picture-sp.jpg);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   @include mq(md) {
     margin-top: myrem(62);
     padding-top: myrem(530);
@@ -113,6 +114,7 @@
 }
 
 .p-information__item-text a {
+  text-decoration: underline;
   @include mq(md) {
     pointer-events: none;
     cursor: default;

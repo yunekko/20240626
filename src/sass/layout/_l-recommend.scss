@@ -4,6 +4,6 @@
   padding-top: myrem(27);
   padding-bottom: myrem(50);
   @include mq(md) {
-    padding-bottom: 45%;
+    padding-bottom: 0;
   }
 }

@@ -93,15 +93,17 @@
   }
 }
 
-.p-flow__wrapper-image {
-  width: myrem(165);
+.p-flow__wrapper::before {
+  content: "";
+  width: 78%;
+  height: 13%;
   position: absolute;
-  top: myrem(-92);
-  left: myrem(-83);
+  transform: translate(myrem(-134), myrem(-93));
+  background: url(../images/flow__top.png) no-repeat center center / contain;
   @include mq(md) {
-    width: myrem(415);
-    top: -35%;
-    left: 0;
+    width: 28%;
+    height: 32%;
+    transform: translate(myrem(12), myrem(-257));
   }
 }
 

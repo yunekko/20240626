@@ -97,7 +97,7 @@
   transform: translateX(-50%);
   @include mq(md) {
     width: unset;
-    top: myrem(50);
+    top: myrem(46);
     left: myrem(157);
     font-size: myrem(20);
     letter-spacing: myrem(-0.2);
@@ -177,7 +177,7 @@
   background-color: $gold1;
   @include mq(md) {
     width: myrem(180);
-    top: myrem(89);
+    top: myrem(84);
   }
 }
 
